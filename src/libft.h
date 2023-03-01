@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:14:09 by arabenst          #+#    #+#             */
-/*   Updated: 2023/02/28 16:08:33 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/01 11:43:41 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,9 +110,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 /* ************************************************************************** */
 
 // get_next_line.c
+
 char	*get_next_line(int fd);
 
 // get_next_line_utils.c
+
 void	gnl_strjoin(char **s1, char *s2);
 t_chain	*gnl_get_from_fd(int fd, t_chain **head);
 
@@ -121,9 +123,11 @@ t_chain	*gnl_get_from_fd(int fd, t_chain **head);
 /* ************************************************************************** */
 
 // ft_printf.c
+
 int		ft_printf(const char *format, ...);
 
 // ft_printf_specs.c
+
 void	ft_get_string(va_list *args, char *tag, char **cache);
 void	ft_get_pointer(va_list *args, char *tag, char **cache);
 void	ft_get_int(va_list *args, char *tag, char **cache);
@@ -131,10 +135,12 @@ void	ft_get_uint(va_list *args, char *tag, char **cache);
 void	ft_get_hex(va_list *args, char *tag, char **cache, int lowercase);
 
 // ft_printf_specs2.c
+
 int		ft_putc(va_list *args, char *tag, int *prtd);
 void	ft_get_percent(char *tag, char **cache);
 
 // ft_printf_utils.c
+
 void	ft_apply_width(char *tag, char **cache);
 void	ft_apply_precision(char *tag, char **cache, int nu);
 void	ft_apply_zero_padding(char *tag, char **cache);
