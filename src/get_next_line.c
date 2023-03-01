@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:16:32 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/01 10:36:27 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/01 12:16:15 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	ft_read_to_cache(int fd, char **cache)
 	if (!buf)
 		return ;
 	bytes_read = 1;
-	while (!ft_strrchr(*cache, '\n') && bytes_read != 0)
+	while (!gnl_strrchr(*cache, '\n') && bytes_read != 0)
 	{
 		bytes_read = read(fd, buf, BUFFER_SIZE);
 		if (bytes_read == -1)

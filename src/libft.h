@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:14:09 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/01 11:43:41 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/01 12:16:26 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ char	*get_next_line(int fd);
 
 // get_next_line_utils.c
 
+char	*gnl_strrchr(const char *s, int c);
 void	gnl_strjoin(char **s1, char *s2);
 t_chain	*gnl_get_from_fd(int fd, t_chain **head);
 

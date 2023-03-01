@@ -6,11 +6,31 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:27:34 by arabenst          #+#    #+#             */
-/*   Updated: 2022/12/21 17:53:56 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/01 12:16:05 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*gnl_strrchr(const char *s, int c)
+{
+	int		i;
+
+	if (!s)
+		return (NULL);
+	i = 0;
+	while (s[i])
+		i++;
+	if ((char)c == '\0')
+		return ((char *)s + i);
+	while (i >= 0)
+	{
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i--;
+	}
+	return (NULL);
+}
 
 void	gnl_strjoin(char **s1, char *s2)
 {
