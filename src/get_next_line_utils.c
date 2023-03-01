@@ -6,11 +6,23 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:27:34 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/01 12:16:05 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/01 12:23:44 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+size_t	gnl_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	if (!s)
+		return (0);
+	while (s[i])
+		i++;
+	return (i);
+}
 
 char	*gnl_strrchr(const char *s, int c)
 {
@@ -40,7 +52,7 @@ void	gnl_strjoin(char **s1, char *s2)
 
 	if (!s2)
 		return ;
-	joined = malloc(sizeof(char) * (ft_strlen(*s1) + ft_strlen(s2) + 1));
+	joined = malloc(sizeof(char) * (gnl_strlen(*s1) + gnl_strlen(s2) + 1));
 	if (!joined)
 		return ;
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:16:32 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/01 12:16:15 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/01 12:23:56 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ static void	ft_save_rest(int fd, char **cache, t_chain **head)
 		gnl_get_from_fd(fd, head)->str = NULL;
 		return ;
 	}
-	rest = malloc(sizeof(char) * (ft_strlen(*cache + ++i) + 1));
+	rest = malloc(sizeof(char) * (gnl_strlen(*cache + ++i) + 1));
 	if (!rest)
 		return ;
 	j = 0;
