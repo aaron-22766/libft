@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:02:09 by arabenst          #+#    #+#             */
-/*   Updated: 2023/02/28 14:55:57 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/02 16:55:27 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 // RETURN
 // Success: Converted number
 // Fail: 0, if an invalid character is in front of the first digit
+// or the created number is smaller than INT_MIN
+// -1 if the created number is bigger than INT_MAX
 int	ft_atoi(const char *str)
 {
 	int		i;
