@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:14:09 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/01 12:25:51 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/09 10:38:41 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,6 +156,7 @@ int		ft_valid_tag(const char *tag);
 int		ft_isupper(int c);
 int		ft_islower(int c);
 int		ft_iswhitespace(int c);
+size_t	ft_count_chars(char *str, char c);
 char	**ft_strmerge(char **dst, char *src, int dstleft);
 char	*ft_uitoa(unsigned int n);
 char	*ft_ultoa_hex(unsigned long n, int lowercase);
