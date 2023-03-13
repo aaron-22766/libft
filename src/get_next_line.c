@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 08:16:32 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/01 12:23:56 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/13 12:01:33 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ static void	ft_read_to_cache(int fd, char **cache)
 	char		*buf;
 	ssize_t		bytes_read;
 
-	buf = malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	buf = malloc(sizeof(char) * (GNL_BUFFER_SIZE + 1));
 	if (!buf)
 		return ;
 	bytes_read = 1;
 	while (!gnl_strrchr(*cache, '\n') && bytes_read != 0)
 	{
-		bytes_read = read(fd, buf, BUFFER_SIZE);
+		bytes_read = read(fd, buf, GNL_BUFFER_SIZE);
 		if (bytes_read == -1)
 		{
 			free(*cache);
@@ -119,19 +119,19 @@ static void	ft_clean_chain(t_chain **head)
 // DESCRIPTION
 // Reads a line from a file descriptor. Repeated calls let you read one line
 // at a time. The line includes the terminating '\\n' character, except if no
-// '\\n' is at EOF. The macro BUFFER_SIZE defines the buffer size for read()
+// '\\n' is at EOF. The macro GNL_BUFFER_SIZE defines the buffer size for read()
 // and can be changed when compiling. There will be undefined behavior if
 // the file has changed since the last call or if the file is a binary file.
 // RETURN
 // Success: String containing the read line. NULL, if EOF is reached.
-// Fail: NULL, if fd < 0, BUFFER_SIZE < 0 or memory allocation fails
+// Fail: NULL, if fd < 0, GNL_BUFFER_SIZE < 0 or memory allocation fails
 char	*get_next_line(int fd)
 {
 	static t_chain	*head;
 	char			*cache;
 	char			*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || GNL_BUFFER_SIZE <= 0)
 		return (NULL);
 	cache = gnl_get_from_fd(fd, &head)->str;
 	line = NULL;
