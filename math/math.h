@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:02:43 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 14:36:54 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/15 08:14:01 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,9 @@ int	ft_is_prime(int n);
 // RETURN
 // The next prime number after ’n’
 int	ft_find_next_prime(int n);
+
+// RETURN
+// 
+int	ft_count_digits(int n);
 
 #endif
