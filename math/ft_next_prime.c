@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:18:03 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 14:18:22 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/17 08:20:35 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_find_next_prime(int n)
 {
-	while (!ft_is_prime(n))
-		n++;
+	while (!ft_is_prime(++n))
+		;
 	return (n);
 }
