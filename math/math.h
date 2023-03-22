@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:02:43 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/15 08:14:01 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/22 08:06:26 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	ft_pow(int base, int exponent);
 
 // RETURN
 // The square root of ’n’
-// -1, if ’n’ is lower than 0
+// -1, if ’n’ is lower than 0 or the square root of ’n’ is not an integer
 int	ft_sqrt(int n);
 
 // RETURN
@@ -57,7 +57,7 @@ int	ft_is_prime(int n);
 int	ft_find_next_prime(int n);
 
 // RETURN
-// 
+// The number of digits of ’n’
 int	ft_count_digits(int n);
 
 #endif
