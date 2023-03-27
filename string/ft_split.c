@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 10:02:31 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 13:47:57 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/27 11:04:43 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static	int	ft_wordcount(char const *s, char c)
 
 	if (!s[0])
 		return (0);
+	if (c == '\0')
+		return (ft_strlen(s));
 	i = 0;
 	count = 0;
 	while (s[i])
@@ -36,6 +38,8 @@ static	int	ft_wordstart(char const *s, char c, int w)
 {
 	int	i;
 
+	if (c == '\0')
+		return (w);
 	i = 0;
 	while (s[i] == c)
 		i++;
@@ -55,6 +59,8 @@ static	int	ft_wordlen(char const *s, char c, int w)
 	int	i;
 	int	a;
 
+	if (c == '\0')
+		return (1);
 	i = ft_wordstart(s, c, w);
 	a = i;
 	while (s[i] && s[i] != c)

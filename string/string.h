@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:02:39 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 13:47:41 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/27 11:12:41 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,8 @@ char	*ft_strtrim(char const *s1, char const *set);
 
 // DESCRIPTION
 // Allocates an array of strings obtained by splitting ’s’ using the character
-// ’c’ as a delimiter. The array ends with a NULL pointer.
+// ’c’ as a delimiter. Passing a null character as ’c’, the string will be
+// splitted by each character. The array ends with a NULL pointer.
 // RETURN
 // Success: The array of new strings resulting from the split
 // Fail: NULL, if memory allocation failed
