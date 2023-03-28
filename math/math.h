@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:02:43 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/22 08:06:26 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/28 08:36:25 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,13 @@ int	ft_fibonacci(int index);
 int	ft_pow(int base, int exponent);
 
 // RETURN
-// The square root of ’n’
-// -1, if ’n’ is lower than 0 or the square root of ’n’ is not an integer
+// The square root of ’n’ if the square root is an integer
+// -1, otherwise or if ’n’ is lower than 0
+int	ft_sqrt_int(int n);
+
+// RETURN
+// The square root of ’n’ (exact value as int, i.e. ft_sqrt(8) = 2)
+// -1, if ’n’ is lower than 0
 int	ft_sqrt(int n);
 
 // RETURN
