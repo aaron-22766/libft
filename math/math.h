@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:02:43 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/28 08:36:25 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/03/29 10:53:44 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,11 @@ int	ft_sqrt_int(int n);
 // The square root of ’n’ (exact value as int, i.e. ft_sqrt(8) = 2)
 // -1, if ’n’ is lower than 0
 int	ft_sqrt(int n);
+
+// RETURN
+// The logarithm with base 2 of ’n’ as int (exact value rounded down)
+// -1, if ’n’ lower than 1
+int	ft_log2_int(int n);
 
 // RETURN
 // 1, if ’n’ is a prime number
