@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:02:39 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/27 11:12:41 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/01 11:10:33 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,5 +163,9 @@ size_t	ft_count_chars(char *str, char c);
 // Success: ’dst’
 // Fail: NULL, if ’src’ is NULL or memory allocation failed
 char	**ft_strmerge(char **dst, char *src, int dstleft);
+
+// DESCRIPTION
+// Reverses the string ’str’ in place.
+void	ft_revstr(char *str);
 
 #endif
