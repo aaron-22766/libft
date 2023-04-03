@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:59:38 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 13:04:59 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/03 13:19:45 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,10 @@ void	*ft_memchr(const void *s, int c, size_t n);
 // 0, if ’n’ is NULL or the two strings are identical.
 // Otherwise, the difference between the first two differing bytes.
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+
+// DESCRIPTION
+// Swaps the two pointers.
+// (Call with ft_swap_pointers((void **)&a, (void **)&b) to swap strings)
+void	ft_swap_pointers(void **a, void **b);
 
 #endif
