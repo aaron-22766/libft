@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr_index.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 12:58:43 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/03 12:00:18 by arabenst         ###   ########.fr       */
+/*   Created: 2023/04/03 11:48:29 by arabenst          #+#    #+#             */
+/*   Updated: 2023/04/03 12:02:33 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 
-char	*ft_strchr(const char *s, int c)
+ssize_t	ft_strrchr_index(char *s, int c)
 {
-	int	i;
+	ssize_t	i;
 
-	i = -1;
-	while (s[++i])
-		if (s[i] == (char)c)
-			return ((char *)s + i);
+	i = ft_strlen(s);
 	if ((char)c == '\0')
-		return ((char *)s + i);
-	return (NULL);
+		return (i);
+	while (--i >= 0)
+		if (s[i] == (char)c)
+			return (i);
+	return (-1);
 }

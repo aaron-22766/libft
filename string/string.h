@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:02:39 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/01 11:10:33 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/03 12:04:55 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,26 @@ char	*ft_strchr(const char *s, int c);
 // Success: Pointer to the located character
 // Fail: NULL, if the character is not contained in the string
 char	*ft_strrchr(const char *s, int c);
+
+// DESCRIPTION
+// Locates the first occurrence of ’c’ (converted to a char)
+// in the string pointed to by ’s’. The terminating null character
+// is considered to be part of the string; therefore if ’c’ is '\0',
+// the functions locate the terminating '\0'.
+// RETURN
+// Success: Index of the located character
+// Fail: -1, if the character is not contained in the string
+ssize_t	ft_strchr_index(char *s, int c);
+
+// DESCRIPTION
+// Locates the last occurrence of ’c’ (converted to a char)
+// in the string pointed to by ’s’. The terminating null character
+// is considered to be part of the string; therefore if ’c’ is '\0',
+// the functions locate the terminating '\0'.
+// RETURN
+// Success: Index of the located character
+// Fail: -1, if the character is not contained in the string
+ssize_t	ft_strrchr_index(char *s, int c);
 
 // DESCRIPTION
 // Compares ’n’ characters of the null-terminated strings ’s1’ and ’s2’.
