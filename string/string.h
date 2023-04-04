@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:02:39 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/04 11:33:15 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/04 11:36:49 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -189,6 +189,6 @@ char	**ft_strmerge(char **dst, char *src, int dstleft);
 // RETURN
 // Success: Pointer to the reversed string
 // Fail: NULL, if ’str’ is NULL
-void	ft_revstr(char *str);
+char	*ft_revstr(char *str);
 
 #endif
