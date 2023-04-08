@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:02:39 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/04 11:36:49 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/08 11:54:43 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,14 @@ ssize_t	ft_strchr_index(char *s, int c);
 // Success: Index of the located character
 // Fail: -1, if the character is not contained in the string
 ssize_t	ft_strrchr_index(char *s, int c);
+
+// DESCRIPTION
+// Compares the null-terminated strings ’s1’ and ’s2’.
+// Characters that appear after a '\0' character are not compared.
+// RETURN
+// An integer greater than, equal to, or less than 0, according as the
+// string ’s1’ is greater than, equal to, or less than the string ’s2’.
+int		ft_strcmp(char *s1, char *s2);
 
 // DESCRIPTION
 // Compares ’n’ characters of the null-terminated strings ’s1’ and ’s2’.
