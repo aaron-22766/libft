@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_convert_base_custom.c                           :+:      :+:    :+:   */
+/*   ft_strnum_invalid.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/31 11:54:50 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/03 12:08:09 by arabenst         ###   ########.fr       */
+/*   Created: 2023/04/05 21:23:34 by arabenst          #+#    #+#             */
+/*   Updated: 2023/04/08 12:03:47 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "convert.h"
+#include "str_math.h"
 
-char	*ft_convert_custom_bases(char *n, char *from_base, char *to_base)
+bool	ft_strnum_invalid(char *n, char *base)
 {
-	char	*decimal;
-	char	*result;
+	int	i;
 
-	if (!n || !from_base || !to_base)
-		return (NULL);
-	decimal = ft_base_to_decimal(n, from_base);
-	result = ft_decimal_to_base(decimal, to_base);
-	return (free(decimal), result);
+	if (!n || !base)
+		return (true);
+	i = 0;
+	if (n[i] == '+' || n[i] == '-')
+		i++;
+	while (n[i])
+		if (!ft_strchr(base, n[i++]))
+			return (true);
+	return (false);
 }

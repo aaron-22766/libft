@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:51:27 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/31 13:20:20 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/01 12:47:23 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,10 @@ char	*ft_uitoa(unsigned int n);
 // Fail: NULL, if memory allocation fails.
 char	*ft_ultoa_hex(unsigned long n, int lowercase);
 
+char	*ft_decimal_to_base(char *n, char *to_base);
+
+char	*ft_base_to_decimal(char *n, char *from_base);
+
 // DESCRIPTION
 // Converts the string ’n’ from base ’from_base’ to base ’to_base’. Works for
 // bases 2 to 62. To enable this function to work for ’n’ being a const string
@@ -100,6 +104,6 @@ char	*ft_convert_base(char *n, int from_base, int to_base);
 // Success: The newly allocated string with the converted number.
 // Fail: NULL, if memory allocation fails, if ’n’ contains characters that are
 // not in ’from_base’ or any of the stings is NULL.
-char	*ft_convert_base_custom(char *n, char *from_base, char *to_base);
+char	*ft_convert_custom_bases(char *n, char *from_base, char *to_base);
 
 #endif

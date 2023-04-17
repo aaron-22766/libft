@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_convert_base_custom.c                           :+:      :+:    :+:   */
+/*   ft_str_add.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/31 11:54:50 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/03 12:08:09 by arabenst         ###   ########.fr       */
+/*   Created: 2023/04/01 13:40:31 by arabenst          #+#    #+#             */
+/*   Updated: 2023/04/03 11:08:23 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "convert.h"
+#include "str_math.h"
 
-char	*ft_convert_custom_bases(char *n, char *from_base, char *to_base)
+char	*ft_str_add(char *addend_a, char *addend_b)
 {
-	char	*decimal;
-	char	*result;
-
-	if (!n || !from_base || !to_base)
-		return (NULL);
-	decimal = ft_base_to_decimal(n, from_base);
-	result = ft_decimal_to_base(decimal, to_base);
-	return (free(decimal), result);
+	return (ft_str_add_in_base(addend_a, addend_b, "0123456789"));
 }
