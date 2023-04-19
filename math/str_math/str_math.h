@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 13:38:32 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/09 08:56:29 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/19 10:53:18 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,18 @@
 /* ************************************************************************** */
 
 // DESCRIPTION
+// Adjusts the pointer ’n’, so that '+' or '-' and all following zero
+// values (in decimal) are ignored. Does not allocate new memory!
+// RETURN
+// Success: Pointer to the absolute value of ’n’.
+// Fail: NULL, if ’n’ is an invalid decimal.
+char	*ft_str_abs(char *n);
+
+// DESCRIPTION
 // Adds the two string numbers ’addend_a’ and ’addend_b’ in decimal.
 // RETURN
 // Success: String containing the result.
-// Fail: NULL, if memory allocation failed, ’addend_a’ or ’addend_b’ are
+// Fail: NULL, if memory allocation failed; ’addend_a’ or ’addend_b’ are
 // NULL or invalid decimals.
 char	*ft_str_add(char *addend_a, char *addend_b);
 
@@ -40,7 +48,7 @@ char	*ft_str_add(char *addend_a, char *addend_b);
 // Subtracts the string number ’subtrahend’ from ’minuend’ in decimal.
 // RETURN
 // Success: String containing the result.
-// Fail: NULL, if memory allocation failed, ’minuend’ or ’subtrahend’ are
+// Fail: NULL, if memory allocation failed; ’minuend’ or ’subtrahend’ are
 // NULL or invalid decimals.
 char	*ft_str_subtract(char *minuend, char *subtrahend);
 
@@ -48,7 +56,7 @@ char	*ft_str_subtract(char *minuend, char *subtrahend);
 // Multiplies the two string numbers ’multiplier’ and ’multiplicand’ in decimal.
 // RETURN
 // Success: String containing the result.
-// Fail: NULL, if memory allocation failed, ’multiplier’ or ’multiplicand’ are
+// Fail: NULL, if memory allocation failed; ’multiplier’ or ’multiplicand’ are
 // NULL or invalid decimals.
 char	*ft_str_multiply(char *multiplier, char *multiplicand);
 
@@ -56,8 +64,8 @@ char	*ft_str_multiply(char *multiplier, char *multiplicand);
 // Divides the string number ’dividend’ by ’divisor’ in decimal.
 // RETURN
 // Success: String containing the result.
-// Fail: NULL, if memory allocation failed, ’dividend’ or ’divisor’ are
-// NULL or invalid decimals.
+// Fail: NULL, if memory allocation failed; ’dividend’ or ’divisor’ are
+// NULL or invalid decimals; ’divisor’ is zero.
 char	*ft_str_divide(char *dividend, char *divisor);
 
 // DESCRIPTION
@@ -65,9 +73,17 @@ char	*ft_str_divide(char *dividend, char *divisor);
 // in decimal.
 // RETURN
 // Success: String containing the result.
-// Fail: NULL, if memory allocation failed, ’base’ or ’exponent’ are
+// Fail: NULL, if memory allocation failed; ’base’ or ’exponent’ are
 // NULL or invalid decimals.
 char	*ft_str_pow(char *base, char *exponent);
+
+// DESCRIPTION
+// Calculates the remainder when dividing ’dividend’ by ’divisor’ in decimal.
+// RETURN
+// Success: String containing the result.
+// Fail: NULL, if memory allocation failed; ’dividend’ or ’divisor’
+// are NULL or invalid decimals; ’divisor’ is zero.
+char	*ft_str_modulo(char *dividend, char *divisor);
 
 // DESCRIPTION
 // Checks if ’n’ is invalid in ’base’.
@@ -89,6 +105,14 @@ bool	ft_strnum_is_zero(char *n, char *base);
 // RETURN
 // 1, 0, or -1, according as ’n1’ is greater than, equal to, or less than ’n2’.
 int		ft_strnumcmp(char *n1, char *n2, char *base);
+
+// DESCRIPTION
+// Adjusts the pointer ’n’, so that '+' or '-' and all following zero
+// values (according to ’base’) are ignored. Does not allocate new memory!
+// RETURN
+// Success: Pointer to the absolute value of ’n’.
+// Fail: NULL, if ’n’ is invalid in ’base’.
+char	*ft_str_abs_in_base(char *n, char *base);
 
 // DESCRIPTION
 // Adds the two string numbers ’addend_a’ and ’addend_b’ in a base defined
@@ -124,7 +148,8 @@ char	*ft_str_multiply_in_base(char *multiplier,
 // RETURN
 // Success: String containing the result.
 // Fail: NULL, if memory allocation failed; ’dividend’, ’divisor’ or ’base’
-// are NULL or ’dividend’ and ’divisor’ are invalid in ’base’.
+// are NULL or ’dividend’ and ’divisor’ are invalid in ’base’; ’divisor’ is
+// zero.
 char	*ft_str_divide_in_base(char *dividend, char *divisor, char *base);
 
 // DESCRIPTION
@@ -135,5 +160,15 @@ char	*ft_str_divide_in_base(char *dividend, char *divisor, char *base);
 // Fail: NULL, if memory allocation failed; ’base’, ’exponent’ or ’base’
 // are NULL or ’base’ and ’exponent’ are invalid in ’base’.
 char	*ft_str_pow_in_base(char *pow_base, char *exponent, char *base);
+
+// DESCRIPTION
+// Calculates the remainder when dividing ’dividend’ by ’divisor’ in a base
+// defined in ’base’.
+// RETURN
+// Success: String containing the result.
+// Fail: NULL, if memory allocation failed; ’dividend’, ’divisor’ or ’base’
+// are NULL or ’dividend’ and ’divisor’ are invalid in ’base’; ’divisor’ is
+// zero.
+char	*ft_str_modulo_in_base(char *dividend, char *divisor, char *base);
 
 #endif

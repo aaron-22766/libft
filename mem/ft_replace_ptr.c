@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_replace_ptr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 14:22:49 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/18 11:53:34 by arabenst         ###   ########.fr       */
+/*   Created: 2023/04/18 12:33:07 by arabenst          #+#    #+#             */
+/*   Updated: 2023/04/18 12:34:58 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "string.h"
+#include "mem.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_replace_ptr(void **orig, void *new)
 {
-	char	*str;
-
-	if (!s)
-		return (NULL);
-	if ((unsigned int)ft_strlen(s) < start)
-		return (ft_strdup(""));
-	if (ft_strlen(s + start) < len)
-		len = ft_strlen(s + start);
-	str = ft_calloc(len + 1, sizeof(char));
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, s + start, len + 1);
-	return (str);
+	free(*orig);
+	*orig = new;
 }

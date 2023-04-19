@@ -6,11 +6,11 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 12:00:59 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 13:05:54 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/18 13:46:53 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "is.h"
+#include "check.h"
 
 int	ft_iswhitespace(int c)
 {

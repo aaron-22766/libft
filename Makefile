@@ -6,7 +6,7 @@
 #    By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 17:40:26 by arabenst          #+#    #+#              #
-#    Updated: 2023/03/13 13:58:24 by arabenst         ###   ########.fr        #
+#    Updated: 2023/04/19 08:43:17 by arabenst         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ RM		=	rm
 RMFLAGS	=	-Rf
 
 SRCS	=	$(wildcard */*.c)
+SRCS	+=	$(wildcard */*/*.c)
 OBJS	=	$(addprefix $(OBJDIR)/,$(notdir $(SRCS:.c=.o)))
 
 all: $(NAME)
@@ -32,6 +33,9 @@ $(NAME): $(OBJS)
 	@$(AR) $(ARFLAGS) $@ $^
 
 $(OBJDIR)/%.o: */%.c | $(OBJDIR)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJDIR)/%.o: */*/%.c | $(OBJDIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJDIR):

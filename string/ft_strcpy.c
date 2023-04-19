@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 14:22:49 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/18 11:53:34 by arabenst         ###   ########.fr       */
+/*   Created: 2023/04/18 11:19:28 by arabenst          #+#    #+#             */
+/*   Updated: 2023/04/18 11:28:56 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	char	*str;
+	int	i;
 
-	if (!s)
-		return (NULL);
-	if ((unsigned int)ft_strlen(s) < start)
-		return (ft_strdup(""));
-	if (ft_strlen(s + start) < len)
-		len = ft_strlen(s + start);
-	str = ft_calloc(len + 1, sizeof(char));
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, s + start, len + 1);
-	return (str);
+	i = -1;
+	while (src[++i])
+		dst[i] = src[i];
+	dst[i] = '\0';
+	return (dst);
 }

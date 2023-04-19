@@ -6,11 +6,11 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:38:56 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 13:07:13 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/18 13:41:29 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "put.h"
+#include "print.h"
 
 static ssize_t	ft_putnbr_fd_helper(int n, int fd, int count)
 {

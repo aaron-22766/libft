@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/28 13:05:11 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 13:05:51 by arabenst         ###   ########.fr       */
+/*   Created: 2022/10/20 08:15:55 by arabenst          #+#    #+#             */
+/*   Updated: 2023/04/18 13:41:22 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "is.h"
+#include "print.h"
 
-int	ft_isupper(int c)
+ssize_t	ft_putchar_fd(char c, int fd)
 {
-	return (c >= 'A' && c <= 'Z');
+	return (write(fd, &c, 1));
 }

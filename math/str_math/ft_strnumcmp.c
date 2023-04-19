@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 08:59:00 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/09 08:56:43 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/18 10:06:07 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	ft_compare_positive(char *n1, char *n2, char *base)
 {
-	int	i;
+	size_t	len1;
+	size_t	len2;
 
 	if (*n1 == '+' || *n1 == '-')
 		n1++;
@@ -24,21 +25,25 @@ int	ft_compare_positive(char *n1, char *n2, char *base)
 		n1++;
 	while (*n2 == base[0])
 		n2++;
-	if (ft_strlen(n1) != ft_strlen(n2))
-		return (ft_strlen(n1) - ft_strlen(n2));
-	i = 0;
-	while (n1[i] && n1[i] == n2[i])
-		i++;
-	if (!n1[i])
+	len1 = ft_strlen(n1);
+	len2 = ft_strlen(n2);
+	if (len1 != len2)
+		return (len1 - len2);
+	while (*n1 && *n1 == *n2)
+	{
+		n1++;
+		n2++;
+	}
+	if (!*n1)
 		return (0);
-	return (ft_strchr_index(base, n1[i]) - ft_strchr_index(base, n2[i]));
+	return (ft_strchr_index(base, *n1) - ft_strchr_index(base, *n2));
 }
 
 int	ft_strnumcmp(char *n1, char *n2, char *base)
 {
 	int	pos;
 
-	pos = ft_compare_positive(n1 , n2, base);
+	pos = ft_compare_positive(n1, n2, base);
 	if (pos > 0)
 		return (1 - 2 * (*n1 == '-'));
 	if (pos < 0)

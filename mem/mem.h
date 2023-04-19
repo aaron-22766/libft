@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:59:38 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/03 13:19:45 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/18 12:39:46 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,10 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 // Swaps the two pointers.
 // (Call with ft_swap_pointers((void **)&a, (void **)&b) to swap strings)
 void	ft_swap_pointers(void **a, void **b);
+
+// DESCRIPTION
+// Assigns ’new’ to ’orig’ without memory leaks.
+// (Call with ft_replace_ptr((void **)&orig, (void *)new) to replace strings)
+void	ft_replace_ptr(void **orig, void *new);
 
 #endif

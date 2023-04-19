@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 14:22:49 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/18 11:53:34 by arabenst         ###   ########.fr       */
+/*   Created: 2022/10/20 08:28:29 by arabenst          #+#    #+#             */
+/*   Updated: 2023/04/18 13:41:33 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "string.h"
+#include "print.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+ssize_t	ft_putstr_fd(char *s, int fd)
 {
-	char	*str;
+	ssize_t	i;
 
 	if (!s)
-		return (NULL);
-	if ((unsigned int)ft_strlen(s) < start)
-		return (ft_strdup(""));
-	if (ft_strlen(s + start) < len)
-		len = ft_strlen(s + start);
-	str = ft_calloc(len + 1, sizeof(char));
-	if (!str)
-		return (NULL);
-	ft_strlcpy(str, s + start, len + 1);
-	return (str);
+		return (-1);
+	i = 0;
+	while (s[i])
+	{
+		if (ft_putchar_fd(s[i], fd) == -1)
+			return (-1);
+		i++;
+	}
+	return (i);
 }

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
-/*			                                                                */
+/*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 12:53:07 by arabenst          #+#    #+#             */
-/*   Updated: 2023/02/28 13:30:14 by arabenst         ###   ########.fr       */
+/*   Created: 2023/02/28 13:03:17 by arabenst          #+#    #+#             */
+/*   Updated: 2023/04/18 13:46:47 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "is.h"
+#include "check.h"
 
-int	ft_isalpha(int c)
+int	ft_islower(int c)
 {
-	return (ft_isupper(c) || ft_islower(c));
+	return (c >= 'a' && c <= 'z');
 }

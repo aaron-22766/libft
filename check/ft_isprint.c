@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/20 08:15:55 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 13:07:45 by arabenst         ###   ########.fr       */
+/*   Created: 2022/10/11 14:48:31 by arabenst          #+#    #+#             */
+/*   Updated: 2023/04/18 13:46:49 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "put.h"
+#include "check.h"
 
-ssize_t	ft_putchar_fd(char c, int fd)
+int	ft_isprint(int c)
 {
-	return (write(fd, &c, 1));
+	return (c >= 32 && c <= 126);
 }

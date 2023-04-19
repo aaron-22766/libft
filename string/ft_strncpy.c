@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/28 13:03:17 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 13:05:46 by arabenst         ###   ########.fr       */
+/*   Created: 2023/04/18 11:19:15 by arabenst          #+#    #+#             */
+/*   Updated: 2023/04/18 11:39:03 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "is.h"
+#include "string.h"
 
-int	ft_islower(int c)
+char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	return (c >= 'a' && c <= 'z');
+	size_t	i;
+
+	i = -1;
+	while (src[++i] && (i < len))
+		dst[i] = src[i];
+	if (i < len)
+		ft_bzero(&dst[i], len - i);
+	return (dst);
 }

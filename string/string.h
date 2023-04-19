@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:02:39 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/08 11:54:43 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/18 11:49:18 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ size_t	ft_strlen(const char *s);
 // and guaranteeing NUL-termination if there is room (should be included in
 // ’dstsize’). Copies up to ’dstsize’ - 1 characters from the string ’src’ to
 // ’dst’, NUL-terminating the result if ’dstsize’ is not 0.
-// If the src and dst strings overlap, the behavior is undefined.
+// If ’src’ and ’dst’ overlap, the behavior is undefined.
 // RETURN
 // The length of the string it tried to create (length of ’src’).
 // If the return value is >= ’dstsize’, the output string has been truncated.
@@ -47,7 +47,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 // It will then NUL-terminate, unless dstsize is 0 or the original dst string
 // was longer than dstsize (in practice this should not happen as it means that
 // either dstsize is incorrect or that dst is not a proper string).
-// If the src and dst strings overlap, the behavior is undefined.
+// If ’src’ and ’dst’ overlap, the behavior is undefined.
 // RETURN
 // The length of the string it tried to create (length ’dst’ + ’src’).
 // If the return value is >= ’dstsize’, the output string has been truncated.
@@ -109,6 +109,26 @@ int		ft_strcmp(char *s1, char *s2);
 // string ’s1’ is greater than, equal to, or less than the string ’s2’.
 // 0, if n is zero.
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
+// DESRIPTION
+// Copies ’src’ to ’dst’ (including the terminating NULL-character).
+// If ’src’ and ’dst’ overlap, the behavior is undefined.
+// ATTENTION
+// Segfaults if ’src’ is bigger than ’dst’!
+// RETURN
+// ’dst’
+char	*ft_strcpy(char *dst, const char *src);
+
+// DESRIPTION
+// Copies at most ’len’ characters from ’src’ to ’dst’.
+// If ’src’ is less than ’len’ characters long, the remainder of ’dst’
+// is filled with NULL-characters. Otherwise, ’dst’ is not terminated.
+// If ’src’ and ’dst’ overlap, the behavior is undefined.
+// ATTENTION
+// Segfaults if ’src’ is bigger than ’dst’!
+// RETURN
+// ’dst’
+char	*ft_strncpy(char *dst, const char *src, size_t len);
 
 // DESCRIPTION
 // Locates the first occurrence of the null-terminated string ’needle’

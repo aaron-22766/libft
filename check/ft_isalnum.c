@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 14:24:11 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 13:05:41 by arabenst         ###   ########.fr       */
+/*   Created: 2022/10/11 13:24:42 by arabenst          #+#    #+#             */
+/*   Updated: 2023/04/18 13:46:39 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "is.h"
+#include "check.h"
 
-int	ft_isascii(int c)
+int	ft_isalnum(int c)
 {
-	return (c >= 0 && c <= 127);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

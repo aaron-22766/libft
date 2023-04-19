@@ -1,66 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is.h                                               :+:      :+:    :+:   */
+/*   print.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 12:56:42 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 12:59:12 by arabenst         ###   ########.fr       */
+/*   Created: 2023/03/13 13:03:01 by arabenst          #+#    #+#             */
+/*   Updated: 2023/04/18 14:29:23 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef IS_H
-# define IS_H
+#ifndef PRINT_H
+# define PRINT_H
 
 /* ************************************************************************** */
 /*                                  INCLUDE                                   */
 /* ************************************************************************** */
 
 # include "../libft.h"
+# include "./ft_printf/ft_printf.h"
 
 /* ************************************************************************** */
 /*                                 FUNCTIONS                                  */
 /* ************************************************************************** */
 
+// DESCRIPTION
+// Outputs the character ’c’ to the given file descriptor ’fd’.
 // RETURN
-// 1: if ’c’ is an uppercase character
-// 0: otherwise
-int		ft_isupper(int c);
+// Success: number of bytes written
+// Fail: -1, if write fails
+ssize_t	ft_putchar_fd(char c, int fd);
 
+// DESCRIPTION
+// Outputs the string ’s’ to the given file descriptor ’fd’.
 // RETURN
-// 1: if ’c’ is a lowercase character
-// 0: otherwise
-int		ft_islower(int c);
+// Success: number of bytes written
+// Fail: -1, if ’s’ is NULL or write fails
+ssize_t	ft_putstr_fd(char *s, int fd);
 
+// DESCRIPTION
+// Outputs the string ’s’ to the given file descriptor ’fd’ 
+// followed by a newline.
 // RETURN
-// 1: if ’c’ is an alphabetic character
-// 0: otherwise
-int		ft_isalpha(int c);
+// Success: number of bytes written
+// Fail: -1, if ’s’ is NULL or write fails
+ssize_t	ft_putendl_fd(char *s, int fd);
 
+// DESCRIPTION
+// Outputs the integer ’n’ to the given file descriptor ’fd’.
 // RETURN
-// 1: if ’c’ is a digit
-// 0: otherwise
-int		ft_isdigit(int c);
-
-// RETURN
-// 1: if ’c’ is an alphabetic character or a digit
-// 0: otherwise
-int		ft_isalnum(int c);
-
-// RETURN
-// 1: if ’c’ is a printable character
-// 0: otherwise
-int		ft_isprint(int c);
-
-// RETURN
-// 1: if ’c’ is an ascii character
-// 0: otherwise
-int		ft_isascii(int c);
-
-// RETURN
-// 1: if ’c’ is a whitespace character
-// 0: otherwise
-int		ft_iswhitespace(int c);
+// Success: number of bytes written
+// Fail: -1, if write fails
+ssize_t	ft_putnbr_fd(int n, int fd);
 
 #endif
