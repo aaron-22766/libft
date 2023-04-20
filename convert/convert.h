@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:51:27 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/01 12:47:23 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/20 11:45:26 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,28 +82,37 @@ char	*ft_uitoa(unsigned int n);
 // Fail: NULL, if memory allocation fails.
 char	*ft_ultoa_hex(unsigned long n, int lowercase);
 
-char	*ft_decimal_to_base(char *n, char *to_base);
-
+// DESCRIPTION
+// Converts the string ’n’ from the custom base ’from_base’ to decimal.
+// RETURN
+// Success: The newly allocated string with the converted number.
+// Fail: NULL, if memory allocation fails, if ’n’ is invalid in ’from_base’
+// or any of the stings are NULL.
 char	*ft_base_to_decimal(char *n, char *from_base);
 
 // DESCRIPTION
-// Converts the string ’n’ from base ’from_base’ to base ’to_base’. Works for
-// bases 2 to 62. To enable this function to work for ’n’ being a const string
-// as well, ’n’ will not be freed; so make sure you do that in the program.
+// Converts the string ’decimal’ from decimal to the custom base ’to_base’.
 // RETURN
 // Success: The newly allocated string with the converted number.
-// Fail: NULL, if memory allocation fails, if ’n’ contains characters that are
-// not in ’from_base’, if ’n’ is NULL or an invalid base is given.
-char	*ft_convert_base(char *n, int from_base, int to_base);
+// Fail: NULL, if memory allocation fails, if ’n’ is an invalid decimal
+// or any of the stings are NULL.
+char	*ft_decimal_to_base(char *decimal, char *to_base);
 
 // DESCRIPTION
-// Converts the string ’n’ from the custom base ’from_base’ to the custom base
-// ’to_base’. To enable this function to work for const strings as well, none
-// of these strings are freed; so make sure you do that in the program.
+// Converts the string ’n’ from custom ’from_base’ to custom ’to_base’.
 // RETURN
 // Success: The newly allocated string with the converted number.
-// Fail: NULL, if memory allocation fails, if ’n’ contains characters that are
-// not in ’from_base’ or any of the stings is NULL.
-char	*ft_convert_custom_bases(char *n, char *from_base, char *to_base);
+// Fail: NULL, if memory allocation fails, if ’n’ is invalid in ’from_base’
+// or any of the stings are NULL.
+char	*ft_convert_base_custom(char *n, char *from_base, char *to_base);
+
+// DESCRIPTION
+// Converts the string ’n’ from ’from_base’ to ’to_base’.
+// If ’from_base’ < 36, alphabetical characters in ’n’ can have any case.
+// RETURN
+// Success: The newly allocated string with the converted number.
+// Fail: NULL, if memory allocation fails, if ’n’ is invalid in ’from_base’
+// or any of the stings are NULL.
+char	*ft_convert_base(char *n, int from_base, int to_base);
 
 #endif
