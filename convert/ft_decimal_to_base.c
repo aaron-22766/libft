@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 12:29:04 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/20 13:52:50 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/20 13:59:33 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static char	*ft_convert(char *decimal, char *to_base, char *base_len)
 	size_t	result_size;
 
 	if (ft_strnum_is_zero(decimal, "0123456789"))
-		return (ft_substr(to_base, 0, 1));
+		return (free(decimal), ft_substr(to_base, 0, 1));
 	result_size = 0;
 	result = NULL;
 	while (!ft_strnum_is_zero(decimal, "0123456789") && decimal)
