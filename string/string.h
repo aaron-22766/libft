@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:02:39 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/18 11:49:18 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/04/20 10:38:12 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,18 @@
 // Length of the string.
 size_t	ft_strlen(const char *s);
 
+// DESCRITPION
+// Converts every lowercase letter in ’str’ to an uppercase letter.
+// RETURN
+// ’str’
+char	*ft_str_toupper(char *str);
+
+// DESCRITPION
+// Converts every uppercase letter in ’str’ to a lowercase letter.
+// RETURN
+// ’str’
+char	*ft_str_tolower(char *str);
+
 // DESRIPTION
 // Copies ’src’ to ’dst’, taking the full size of the destination buffer
 // and guaranteeing NUL-termination if there is room (should be included in
@@ -43,15 +55,28 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 // DESRIPTION
 // Concatenates ’src’ to ’dst’, taking the full size of the destination buffer
 // and guaranteeing NUL-termination if there is room (should be included in
-// ’dstsize’). It will append at most dstsize - strlen(dst) - 1 characters.
-// It will then NUL-terminate, unless dstsize is 0 or the original dst string
-// was longer than dstsize (in practice this should not happen as it means that
-// either dstsize is incorrect or that dst is not a proper string).
+// ’dstsize’). It will append at most ’dstsize’ - strlen(’dst’) - 1 characters.
+// It will then NUL-terminate, unless ’dstsize’ is 0 or the original ’dst’
+// string was longer than ’dstsize’ (means that either ’dstsize’ is incorrect
+// or that ’dst’ is not a proper string).
 // If ’src’ and ’dst’ overlap, the behavior is undefined.
 // RETURN
 // The length of the string it tried to create (length ’dst’ + ’src’).
 // If the return value is >= ’dstsize’, the output string has been truncated.
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+
+// DESRIPTION
+// If there is not enough space in the destination buffer to concatenate ’src’
+// to ’dst’, sufficient memory will be allocated and ’dst’ will be replaced
+// without memory leaks.
+// If there is enough space, a regular strlcat will be performed.
+// If ’src’ and ’dst’ overlap, the behavior is undefined.
+// RETURN
+// Success: The current size of the destination buffer (’dstsize’).
+// If return > ’dstsize’, new memory was allocated.
+// If return == ’dstsize’, a regular strlcat was performed.
+// Fail: 0, if memory allocation failed
+size_t	ft_strlcat_realloc(char **dst, const char *src, size_t dstsize);
 
 // DESCRIPTION
 // Locates the first occurrence of ’c’ (converted to a char)
