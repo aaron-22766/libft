@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:56:42 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/18 13:46:30 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/05/19 15:40:08 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,6 @@ int		ft_isascii(int c);
 // RETURN
 // 1: if ’c’ is a whitespace character
 // 0: otherwise
-int		ft_iswhitespace(int c);
+int		ft_isspace(int c);
 
 #endif
