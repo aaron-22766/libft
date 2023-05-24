@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 16:02:09 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 12:55:16 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/05/24 07:47:57 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	result = 0;
 	sign = 1;
-	while (ft_iswhitespace(str[i]))
+	while (ft_isspace(str[i]))
 		i++;
 	if (str[i] == '-')
 		sign = -1;
