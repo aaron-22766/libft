@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 14:02:43 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/01 14:58:21 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/05/26 13:55:02 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int		ft_log2_int(int n);
 // RETURN
 // 1, if ’n’ is a prime number
 // 0, if ’n’ is not a prime or if ’n’ is lower than 2
-int		ft_is_prime(int n);
+bool	ft_is_prime(int n);
 
 // RETURN
 // The next prime number after ’n’

@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:56:42 by arabenst          #+#    #+#             */
-/*   Updated: 2023/05/19 15:40:08 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/05/26 13:51:43 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,41 +26,41 @@
 // RETURN
 // 1: if ’c’ is an uppercase character
 // 0: otherwise
-int		ft_isupper(int c);
+bool	ft_isupper(int c);
 
 // RETURN
 // 1: if ’c’ is a lowercase character
 // 0: otherwise
-int		ft_islower(int c);
+bool	ft_islower(int c);
 
 // RETURN
 // 1: if ’c’ is an alphabetic character
 // 0: otherwise
-int		ft_isalpha(int c);
+bool	ft_isalpha(int c);
 
 // RETURN
 // 1: if ’c’ is a digit
 // 0: otherwise
-int		ft_isdigit(int c);
+bool	ft_isdigit(int c);
 
 // RETURN
 // 1: if ’c’ is an alphabetic character or a digit
 // 0: otherwise
-int		ft_isalnum(int c);
+bool	ft_isalnum(int c);
 
 // RETURN
 // 1: if ’c’ is a printable character
 // 0: otherwise
-int		ft_isprint(int c);
+bool	ft_isprint(int c);
 
 // RETURN
 // 1: if ’c’ is an ascii character
 // 0: otherwise
-int		ft_isascii(int c);
+bool	ft_isascii(int c);
 
 // RETURN
 // 1: if ’c’ is a whitespace character
 // 0: otherwise
-int		ft_isspace(int c);
+bool	ft_isspace(int c);
 
 #endif

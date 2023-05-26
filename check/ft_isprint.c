@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:48:31 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/18 13:46:49 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/05/26 13:52:07 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-int	ft_isprint(int c)
+bool	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 13:03:17 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/18 13:46:47 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/05/26 13:52:03 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-int	ft_islower(int c)
+bool	ft_islower(int c)
 {
 	return (c >= 'a' && c <= 'z');
 }
