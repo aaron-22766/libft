@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:59:38 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/18 12:39:46 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/05/26 16:08:34 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,9 @@ void	ft_swap_pointers(void **a, void **b);
 // Assigns ’new’ to ’orig’ without memory leaks.
 // (Call with ft_replace_ptr((void **)&orig, (void *)new) to replace strings)
 void	ft_replace_ptr(void **orig, void *new);
+
+// DESCRIPTION
+// Free's the null terminated 2d array
+void	ft_free_2d_array(void **array);
 
 #endif
