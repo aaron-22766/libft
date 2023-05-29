@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 11:48:29 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/03 12:02:33 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/05/29 10:48:07 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 
-ssize_t	ft_strrchr_index(char *s, int c)
+ssize_t	ft_strrchr_index(const char *s, int c)
 {
 	ssize_t	i;
 

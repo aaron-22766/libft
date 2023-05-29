@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:02:39 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/20 10:38:12 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/05/29 10:48:20 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ char	*ft_strrchr(const char *s, int c);
 // RETURN
 // Success: Index of the located character
 // Fail: -1, if the character is not contained in the string
-ssize_t	ft_strchr_index(char *s, int c);
+ssize_t	ft_strchr_index(const char *s, int c);
 
 // DESCRIPTION
 // Locates the last occurrence of ’c’ (converted to a char)
@@ -116,7 +116,7 @@ ssize_t	ft_strchr_index(char *s, int c);
 // RETURN
 // Success: Index of the located character
 // Fail: -1, if the character is not contained in the string
-ssize_t	ft_strrchr_index(char *s, int c);
+ssize_t	ft_strrchr_index(const char *s, int c);
 
 // DESCRIPTION
 // Compares the null-terminated strings ’s1’ and ’s2’.
