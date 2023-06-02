@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 09:54:41 by arabenst          #+#    #+#             */
-/*   Updated: 2023/06/01 16:31:52 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/06/02 10:46:51 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,8 @@ int	ft_vdprintf(int fd, const char *format, va_list	ap);
 // "cspdiuxX%" are the supported conversion characters
 // "-0.# +" are the supported flags (yes, space as well)
 // RETURN
-// Success: number of printed characters
-// Fail: -1, if malloc or write failed
+// Success: number of characters written to ’*ret’
+// Fail: -1, if malloc failed
 int	ft_asprintf(char **ret, const char *format, ...);
 
 // DESCRIPTION
@@ -74,8 +74,8 @@ int	ft_asprintf(char **ret, const char *format, ...);
 // "cspdiuxX%" are the supported conversion characters
 // "-0.# +" are the supported flags (yes, space as well)
 // RETURN
-// Success: number of printed characters
-// Fail: -1, if malloc or write failed
+// Success: number of characters written to ’*ret’
+// Fail: -1, if malloc failed
 int	ft_vasprintf(char **ret, const char *format, va_list ap);
 
 #endif
