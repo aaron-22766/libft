@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 13:38:32 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/19 14:04:07 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/06/15 13:03:26 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,14 +90,14 @@ char	*ft_str_modulo(char *dividend, char *divisor);
 // RETURN
 // true, if ’n’ or ’base’ are NULL or ’n’ is invalid in ’base’
 // false, if ’n’ is valid in ’base’
-bool	ft_strnum_invalid(char *n, char *base);
+char	ft_strnum_invalid(char *n, char *base);
 
 // DESCRIPTION
 // Checks if ’n’ is a zero number according to ’base’.
 // RETURN
 // true, ’n’ is zero
 // false, if ’n’ is not zero, or either ’n’ or ’base’ are NULL
-bool	ft_strnum_is_zero(char *n, char *base);
+char	ft_strnum_is_zero(char *n, char *base);
 
 // DESCRIPTION
 // Compares the string numbers ’n1’ and ’n2’ according to ’base’.

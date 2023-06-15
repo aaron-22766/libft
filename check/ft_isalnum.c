@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:24:42 by arabenst          #+#    #+#             */
-/*   Updated: 2023/05/26 13:51:47 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/06/15 13:01:09 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-bool	ft_isalnum(int c)
+char	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }

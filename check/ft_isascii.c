@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:24:11 by arabenst          #+#    #+#             */
-/*   Updated: 2023/05/26 13:51:55 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/06/15 13:01:16 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-bool	ft_isascii(int c)
+char	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

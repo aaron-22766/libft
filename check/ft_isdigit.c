@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 13:13:36 by arabenst          #+#    #+#             */
-/*   Updated: 2023/05/26 13:52:00 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/06/15 13:01:18 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-bool	ft_isdigit(int c)
+char	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }

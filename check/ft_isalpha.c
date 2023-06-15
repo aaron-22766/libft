@@ -12,7 +12,7 @@
 
 #include "check.h"
 
-bool	ft_isalpha(int c)
+char	ft_isalpha(int c)
 {
 	return (ft_isupper(c) || ft_islower(c));
 }
