@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:02:39 by arabenst          #+#    #+#             */
-/*   Updated: 2023/05/29 10:48:20 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/06/15 13:00:56 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -243,5 +243,14 @@ char	**ft_strmerge(char **dst, char *src, int dstleft);
 // Success: Pointer to the reversed string
 // Fail: NULL, if ’str’ is NULL
 char	*ft_revstr(char *str);
+
+// DESCRIPTION
+// Inserts the string ’insert’ into ’str’, replacing
+// the portion indicated by ’start’ and ’len’ of ’str’.
+// If memory allocation fails, ’str’ remains unchanged.
+// RETURN
+// Success: true
+// Fail: false, if ’str’ remained unchanged
+char	ft_str_insert(char **str, char *insert, size_t start, size_t len);
 
 #endif
