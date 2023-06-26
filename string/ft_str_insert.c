@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 12:50:56 by arabenst          #+#    #+#             */
-/*   Updated: 2023/06/15 13:14:34 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/06/26 13:59:30 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ char	ft_str_insert(char **str, char *insert, size_t start, size_t len)
 	{
 		free(*str);
 		*str = new;
-		return (true);
+		return (free(front), free(back), true);
 	}
-	free(front);
-	free(back);
-	return (false);
+	return (free(front), free(back), false);
 }
