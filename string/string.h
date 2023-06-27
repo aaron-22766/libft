@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:02:39 by arabenst          #+#    #+#             */
-/*   Updated: 2023/06/15 13:00:56 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/06/27 10:31:43 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,17 @@
 /* ************************************************************************** */
 
 // DESCRITPION
-// Computes the length of the string ’s’.
+// Computes the length of the string ’s’. (not protected)
 // RETURN
 // Length of the string.
 size_t	ft_strlen(const char *s);
+
+// DESCRITPION
+// Computes the length of the string ’s’. (protected)
+// RETURN
+// Length of the string.
+// 0, if ’s’ is NULL.
+size_t	ft_strplen(const char *s);
 
 // DESCRITPION
 // Converts every lowercase letter in ’str’ to an uppercase letter.
