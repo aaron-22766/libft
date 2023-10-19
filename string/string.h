@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 16:34:20 by arabenst          #+#    #+#             */
-/*   Updated: 2023/10/19 17:15:35 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 18:08:18 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,8 +163,8 @@ ssize_t	ft_strrchr_index(const char *s, int c);
  * @param s String to search through
  * @param charset Set of characters to ignore
  * @retval ✔︎ Index of the first character of ’s’ which is not in ’charset’
- * @retval ✘ If every character of ’s’ appears in ’charset’,
- * the index of the first NULL-character
+ * @retval ✘ Index of the first NULL-character,
+ * if every character of ’s’ appears in ’charset’
  * @warning Segfaults, if any of the strings are NULL
  */
 size_t	ft_strspn(const char *s, const char *charset);
@@ -177,11 +177,38 @@ size_t	ft_strspn(const char *s, const char *charset);
  * @param s String to search through
  * @param charset Set of characters to search for
  * @retval ✔︎ Index of the first character of ’s’ which is also in ’charset’
- * @retval ✘If every character of ’s’ does not appear in ’charset’,
- * the index of the first NULL-character
+ * @retval ✘ Index of the first NULL-character,
+ * if every character of ’s’ does not appear in ’charset’
  * @warning Segfaults, if any of the strings are NULL
  */
 size_t	ft_strcspn(const char *s, const char *charset);
+
+/**
+ * @brief Spans the trailing part of the NULL-terminated string ’s’ as long as
+ * the characters from ’s’ occur in the NULL-terminated string ’charset’.
+ * 
+ * @param s String to search through
+ * @param charset Set of characters to ignore
+ * @retval ✔︎ Index of the last character of ’s’ which is not in ’charset’
+ * @retval ✘ Index of the first NULL-character,
+ * if every character of ’s’ appears in ’charset’
+ * @warning Segfaults, if any of the strings are NULL
+ */
+size_t	ft_strrspn(const char *s, const char *charset);
+
+/**
+ * @brief Spans the trailing part of the NULL-terminated string ’s’ as long as
+ * the characters from ’s’ occur in the NULL-terminated string ’charset’.
+ * 
+ * @param s String to search through
+ * @param charset Set of characters to ignore
+ * @retval ✔︎ Index of the last character of ’s’ which is not in ’charset’
+ * @retval ✘ Index of the first NULL-character,
+ * if every character of ’s’ does not appear in
+ * ’charset’
+ * @warning Segfaults, if any of the strings are NULL
+ */
+size_t	ft_strrcspn(const char *s, const char *charset);
 
 /**
  * @brief Compares the two strings ’s1’ and ’s2’.
