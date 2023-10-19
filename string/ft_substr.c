@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:22:49 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/18 11:53:34 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 15:38:39 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	char	*str;
 

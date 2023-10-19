@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:59:01 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 13:48:31 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 15:38:36 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	char	*trimmed;
 	int		i;

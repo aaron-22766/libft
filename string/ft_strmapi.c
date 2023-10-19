@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 16:13:12 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 13:48:17 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 15:38:19 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
 	int		i;
 	char	*str;

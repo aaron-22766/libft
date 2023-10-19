@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 10:02:31 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/27 11:04:43 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 15:37:57 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 
-static	int	ft_wordcount(char const *s, char c)
+static	int	ft_wordcount(const char *s, char c)
 {
 	int	i;
 	int	count;
@@ -34,7 +34,7 @@ static	int	ft_wordcount(char const *s, char c)
 	return (count - (s[i - 1] == c));
 }
 
-static	int	ft_wordstart(char const *s, char c, int w)
+static	int	ft_wordstart(const char *s, char c, int w)
 {
 	int	i;
 
@@ -54,7 +54,7 @@ static	int	ft_wordstart(char const *s, char c, int w)
 	return (i);
 }
 
-static	int	ft_wordlen(char const *s, char c, int w)
+static	int	ft_wordlen(const char *s, char c, int w)
 {
 	int	i;
 	int	a;
@@ -68,7 +68,7 @@ static	int	ft_wordlen(char const *s, char c, int w)
 	return (i - a);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	int		i;
 	int		wordcount;

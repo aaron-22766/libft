@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:47:24 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 13:48:07 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 15:38:11 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
 	int		size;
 	char	*joined;

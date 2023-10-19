@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 13:02:39 by arabenst          #+#    #+#             */
-/*   Updated: 2023/10/18 16:47:34 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 15:37:49 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -238,7 +238,7 @@ char	*ft_strdup(const char *s1);
  * (empty if ’start’ is greater than or equals to strlen of ’s’)
  * @retval ✘ NULL, if ’s’ is NULL or memory allocation failed
  */
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_substr(const char *s, unsigned int start, size_t len);
 
 /**
  * @brief Allocates new string, which is the result of the concatenation of
@@ -249,7 +249,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
  * @retval ✔︎ Concatenated string
  * @retval ✘ NULL, if ’s1’ or ’s2’ are NULL or memory allocation failed
  */
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(const char *s1, const char *s2);
 
 /**
  * @brief Allocates a copy of ’s1’ with all characters specified in ’set’
@@ -260,7 +260,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
  * @retval ✔︎ Trimmed string
  * @retval ✘ NULL, if ’s1’ or ’set’ are NULL or memory allocation failed
  */
-char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strtrim(const char *s1, const char *set);
 
 /**
  * @brief Allocates a NULL-terminated array of strings obtained by splitting
@@ -272,7 +272,7 @@ char	*ft_strtrim(char const *s1, char const *set);
  * @retval ✔︎ The array of new strings resulting from the split
  * @retval ✘ NULL, if ’s’ is NULL or memory allocation failed
  */
-char	**ft_split(char const *s, char c);
+char	**ft_split(const char *s, char c);
 
 /**
  * @brief Applies the function ’f’ to each character of the string ’s’, and
@@ -284,7 +284,7 @@ char	**ft_split(char const *s, char c);
  * @retval ✔︎ The new string
  * @retval ✘ NULL, if ’s’ is NULL or memory allocation failed
  */
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 
 /**
  * @brief Applies the function ’f’ on each character of the string passed as
