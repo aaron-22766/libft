@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:59:38 by arabenst          #+#    #+#             */
-/*   Updated: 2023/10/19 12:24:16 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 14:17:04 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,10 +120,19 @@ void	ft_swap_pointers(void **a, void **b);
 void	ft_replace_ptr(void **orig, void *new);
 
 /**
- * @brief Frees the NULL-terminated two dimensional array
+ * @brief Frees the NULL-terminated two-dimensional array
  * 
  * @param array Array to free
  */
 void	ft_free_2d_array(void **array);
+
+/**
+ * @brief Counts the elements of the NULL-terminated two-dimensional array.
+ * 
+ * @param array Array to count
+ * @retval Number of elements up to the first NULL-byte
+ * @retval 0, if ’array’ is NULL
+ */
+size_t	ft_count_2d_array(void **array);
 
 #endif
