@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 13:02:39 by arabenst          #+#    #+#             */
-/*   Updated: 2023/10/19 15:37:49 by arabenst         ###   ########.fr       */
+/*   Created: 2023/10/19 16:34:20 by arabenst          #+#    #+#             */
+/*   Updated: 2023/10/19 16:34:28 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,6 +155,31 @@ ssize_t	ft_strchr_index(const char *s, int c);
  * @warning Segfaults, if ’s’ is NULL
  */
 ssize_t	ft_strrchr_index(const char *s, int c);
+
+/**
+ * @brief Spans the initial part of the NULL-terminated string ’s’ as long as
+ * the characters from ’s’ occur in the NULL-terminated string ’charset’.
+ * 
+ * @param s String to search through
+ * @param charset Set of characters to ignore
+ * @retval ✔︎ Index of the first character of ’s’ which is not in ’charset’
+ * @retval ✘ If every character of ’s’ appears in ’charset’,
+ * the index of the first NULL-character
+ */
+size_t	ft_strspn(const char *s, const char *charset);
+
+/**
+ * @brief Spans the initial part of the NULL-terminated string ’s’ as long as
+ * the characters from ’s’ do not occur in the NULL-terminated string ’charset’
+ * (it spans the complement of ’charset’).
+ * 
+ * @param s String to search through
+ * @param charset Set of characters to search for
+ * @retval ✔︎ Index of the first character of ’s’ which is also in ’charset’
+ * @retval ✘If every character of ’s’ does not appear in ’charset’,
+ * the index of the first NULL-character
+ */
+size_t	ft_strcspn(const char *s, const char *charset);
 
 /**
  * @brief Compares the two strings ’s1’ and ’s2’.

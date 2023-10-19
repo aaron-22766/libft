@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strspn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/20 08:28:29 by arabenst          #+#    #+#             */
-/*   Updated: 2023/10/19 16:42:33 by arabenst         ###   ########.fr       */
+/*   Created: 2023/10/19 15:48:11 by arabenst          #+#    #+#             */
+/*   Updated: 2023/10/19 16:22:48 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "print.h"
+#include "string.h"
 
-ssize_t	ft_putstr_fd(char *s, int fd)
+size_t	ft_strspn(const char *s, const char *charset)
 {
-	ssize_t	i;
+	size_t	i;
 
-	if (!s)
-		return (-1);
 	i = 0;
-	while (s[i])
-	{
-		if (ft_putchar_fd(s[i], fd) == -1)
-			return (-1);
+	while (*ft_strchr(charset, s[i]))
 		i++;
-	}
 	return (i);
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
+{
+	char	*str = "aaccbbaaddaabbccadd";
+	char	*set = "abc";
+
+	printf("%zu\n", strspn(str, set));
+	printf("%zu\n", ft_strspn(str, set));
 }

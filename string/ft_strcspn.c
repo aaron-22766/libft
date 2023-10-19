@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strcspn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/20 08:28:29 by arabenst          #+#    #+#             */
-/*   Updated: 2023/10/19 16:42:33 by arabenst         ###   ########.fr       */
+/*   Created: 2023/10/19 15:48:23 by arabenst          #+#    #+#             */
+/*   Updated: 2023/10/19 15:48:28 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "print.h"
+#include "string.h"
 
-ssize_t	ft_putstr_fd(char *s, int fd)
+size_t	ft_strcspn(const char *s, const char *charset)
 {
-	ssize_t	i;
-
-	if (!s)
-		return (-1);
-	i = 0;
-	while (s[i])
-	{
-		if (ft_putchar_fd(s[i], fd) == -1)
-			return (-1);
-		i++;
-	}
-	return (i);
+	
 }
+
