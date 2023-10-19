@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 13:05:11 by arabenst          #+#    #+#             */
-/*   Updated: 2023/06/15 13:01:29 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:53:44 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-char	ft_isupper(int c)
+bool	ft_isupper(int c)
 {
 	return (c >= 'A' && c <= 'Z');
 }

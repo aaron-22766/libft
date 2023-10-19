@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_pow_in_base.c                               :+:      :+:    :+:   */
+/*   ft_strnum_pow_in_base.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 13:51:59 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/19 12:10:22 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 10:05:41 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "str_math.h"
 
-char	*ft_str_pow_in_base(char *pow_base, char *exponent, char *base)
+char	*ft_strnum_pow_in_base(char *pow_base, char *exponent, char *base)
 {
 	char	*power;
 	char	*count;
@@ -30,9 +30,9 @@ char	*ft_str_pow_in_base(char *pow_base, char *exponent, char *base)
 	while (ft_strnumcmp(count, exponent, base) < 0)
 	{
 		ft_replace_ptr((void **)&count,
-			(void *)ft_str_add_in_base(count, one, base));
+			(void *)ft_strnum_add_in_base(count, one, base));
 		ft_replace_ptr((void **)&power,
-			(void *)ft_str_multiply_in_base(power, pow_base, base));
+			(void *)ft_strnum_multiply_in_base(power, pow_base, base));
 		if (!power || !count)
 			return (free(power), free(count), free(one), NULL);
 	}

@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:50:26 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 13:48:19 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/18 15:23:12 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 
-char	**ft_strmerge(char **dst, char *src, int dstleft)
+char	**ft_strmerge(char **dst, char *src, bool dstleft)
 {
 	char	*joined;
 	size_t	i;

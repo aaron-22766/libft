@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 12:50:56 by arabenst          #+#    #+#             */
-/*   Updated: 2023/06/26 13:59:30 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/18 15:10:17 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 
-char	ft_str_insert(char **str, char *insert, size_t start, size_t len)
+bool	ft_str_insert(char **str, char *insert, size_t start, size_t len)
 {
 	char	*front;
 	char	*back;

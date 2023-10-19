@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 12:29:04 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/20 13:59:33 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 12:38:09 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static char	*ft_convert(char *decimal, char *to_base, char *base_len)
 	result = NULL;
 	while (!ft_strnum_is_zero(decimal, "0123456789") && decimal)
 	{
-		mod = ft_str_modulo(decimal, base_len);
+		mod = ft_strnum_modulo(decimal, base_len);
 		if (!mod)
 			return (free(result), NULL);
 		digit = ft_substr(to_base, ft_atoi(mod), 1);
@@ -34,7 +34,7 @@ static char	*ft_convert(char *decimal, char *to_base, char *base_len)
 			return (free(result), NULL);
 		result_size = ft_strlcat_realloc(&result, digit, result_size);
 		free(digit);
-		ft_replace_ptr((void **)&decimal, ft_str_divide(decimal, base_len));
+		ft_replace_ptr((void **)&decimal, ft_strnum_divide(decimal, base_len));
 	}
 	return (free(decimal), result);
 }
@@ -48,7 +48,7 @@ char	*ft_decimal_to_base(char *decimal, char *to_base)
 	if (!decimal || !to_base || ft_strnum_invalid(decimal, "0123456789"))
 		return (NULL);
 	sign_n = '+' * (decimal[0] != '-') + '-' * (decimal[0] == '-');
-	decimal = ft_strdup(ft_str_abs_in_base(decimal, "0123456789"));
+	decimal = ft_strdup(ft_strnum_abs_in_base(decimal, "0123456789"));
 	base_len = ft_itoa(ft_strlen(to_base));
 	if (!decimal || !base_len)
 		return (free(decimal), free(base_len), NULL);

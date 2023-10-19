@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 13:52:49 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 12:55:42 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 09:38:59 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "convert.h"
 
-static int	ft_hex(unsigned long n, int lowercase, char *str, int i)
+static int	ft_hex(unsigned long n, bool lowercase, char *str, int i)
 {
 	const char	*base;
 
@@ -30,7 +30,7 @@ static int	ft_hex(unsigned long n, int lowercase, char *str, int i)
 	return (i);
 }
 
-char	*ft_ultoa_hex(unsigned long n, int lowercase)
+char	*ft_ultoa_hex(unsigned long n, bool lowercase)
 {
 	unsigned long	lu;
 	int				digits;

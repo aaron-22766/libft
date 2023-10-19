@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_subtract_in_base.c                          :+:      :+:    :+:   */
+/*   ft_strnum_subtract_in_base.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 13:44:42 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/19 10:36:41 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 10:05:59 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ static char	*ft_subtract(char *minuend, char *subtrahend, char *base)
 	return (ft_revstr(difference));
 }
 
-char	*ft_str_subtract_in_base(char *minuend, char *subtrahend, char *base)
+char	*ft_strnum_subtract_in_base(char *minuend, char *subtrahend, char *base)
 {
 	char	*difference;
 	char	sign_a;
@@ -85,15 +85,15 @@ char	*ft_str_subtract_in_base(char *minuend, char *subtrahend, char *base)
 		return (NULL);
 	sign_a = '+' * (minuend[0] != '-') + '-' * (minuend[0] == '-');
 	sign_b = '+' * (subtrahend[0] != '-') + '-' * (subtrahend[0] == '-');
-	minuend = ft_str_abs_in_base(minuend, base);
-	subtrahend = ft_str_abs_in_base(subtrahend, base);
+	minuend = ft_strnum_abs_in_base(minuend, base);
+	subtrahend = ft_strnum_abs_in_base(subtrahend, base);
 	if (!minuend || !subtrahend)
 		return (NULL);
 	if (sign_a == '+' && sign_b == '+')
 		return (ft_subtract(minuend, subtrahend, base));
 	else if (sign_a == '-' && sign_b == '-')
 		return (ft_subtract(subtrahend, minuend, base));
-	difference = ft_revstr(ft_str_add_in_base(minuend, subtrahend, base));
+	difference = ft_revstr(ft_strnum_add_in_base(minuend, subtrahend, base));
 	if (difference && sign_a == '-' && sign_b == '+')
 		difference[ft_strlen(difference)] = '-';
 	return (ft_revstr(difference));

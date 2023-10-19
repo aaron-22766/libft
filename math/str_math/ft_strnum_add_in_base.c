@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_add_in_base.c                               :+:      :+:    :+:   */
+/*   ft_strnum_add_in_base.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 13:39:42 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/19 12:13:09 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 10:04:18 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static char	*ft_add(char *addend_a, char *addend_b, char *base, size_t i)
 	return (sum);
 }
 
-char	*ft_str_add_in_base(char *addend_a, char *addend_b, char *base)
+char	*ft_strnum_add_in_base(char *addend_a, char *addend_b, char *base)
 {
 	char	*sum;
 	char	sign_a;
@@ -51,14 +51,14 @@ char	*ft_str_add_in_base(char *addend_a, char *addend_b, char *base)
 		return (NULL);
 	sign_a = '+' * (addend_a[0] != '-') + '-' * (addend_a[0] == '-');
 	sign_b = '+' * (addend_b[0] != '-') + '-' * (addend_b[0] == '-');
-	addend_a = ft_str_abs_in_base(addend_a, base);
-	addend_b = ft_str_abs_in_base(addend_b, base);
+	addend_a = ft_strnum_abs_in_base(addend_a, base);
+	addend_b = ft_strnum_abs_in_base(addend_b, base);
 	if (!addend_a || !addend_b)
 		return (NULL);
 	if (sign_a == '+' && sign_b == '-')
-		return (ft_str_subtract_in_base(addend_a, addend_b, base));
+		return (ft_strnum_subtract_in_base(addend_a, addend_b, base));
 	else if (sign_a == '-' && sign_b == '+')
-		return (ft_str_subtract_in_base(addend_b, addend_a, base));
+		return (ft_strnum_subtract_in_base(addend_b, addend_a, base));
 	sum = ft_add(addend_a, addend_b, base, -1);
 	if (sum && sign_a == '-' && sign_b == '-')
 		sum[ft_strlen(sum)] = '-';

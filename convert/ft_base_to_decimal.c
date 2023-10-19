@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 12:29:50 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/19 16:16:57 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 12:37:40 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,14 @@ static char	*ft_convert(char *n, char *from_base, char *decimal, char *base_len)
 	while (++i < n_len && decimal)
 	{
 		temp = ft_itoa(i);
-		pow = ft_str_pow(base_len, temp);
+		pow = ft_strnum_pow(base_len, temp);
 		free(temp);
 		temp = ft_itoa(ft_strchr_index(from_base, n[n_len - 1 - i]));
-		product = ft_str_multiply(temp, pow);
+		product = ft_strnum_multiply(temp, pow);
 		free(pow);
 		free(temp);
-		ft_replace_ptr((void **)&decimal, (void *)ft_str_add(decimal, product));
+		ft_replace_ptr((void **)&decimal,
+			(void *)ft_strnum_add(decimal, product));
 		free(product);
 	}
 	return (decimal);
@@ -50,7 +51,7 @@ char	*ft_base_to_decimal(char *n, char *from_base)
 	if (!decimal || !base_len)
 		return (free(decimal), free(base_len), NULL);
 	sign_n = '+' * (n[0] != '-') + '-' * (n[0] == '-');
-	n = ft_str_abs_in_base(n, from_base);
+	n = ft_strnum_abs_in_base(n, from_base);
 	decimal = ft_convert(n, from_base, decimal, base_len);
 	if (sign_n == '+')
 		return (free(base_len), decimal);

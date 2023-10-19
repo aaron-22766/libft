@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 12:00:59 by arabenst          #+#    #+#             */
-/*   Updated: 2023/06/15 13:01:27 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/18 16:53:42 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "check.h"
 
-char	ft_isspace(int c)
+bool	ft_isspace(int c)
 {
 	return ((c >= '\t' && c <= '\r') || c == ' ');
 }

@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:25:31 by arabenst          #+#    #+#             */
-/*   Updated: 2023/03/13 14:41:16 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 09:59:25 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 /* ************************************************************************** */
 
 # ifndef GNL_BUFFER_SIZE
-#  define GNL_BUFFER_SIZE 1
+#  define GNL_BUFFER_SIZE 420
 # endif
 
 /* ************************************************************************** */
@@ -42,15 +42,17 @@ typedef struct s_gnl
 /*                                 FUNCTIONS                                  */
 /* ************************************************************************** */
 
-// DESCRIPTION
-// Reads a line from a file descriptor. Repeated calls let you read one line
-// at a time. The line includes the terminating '\\n' character, except if no
-// '\\n' is at EOF. The macro GNL_BUFFER_SIZE defines the buffer size for read()
-// and can be changed when compiling. There will be undefined behavior if
-// the file has changed since the last call or if the file is a binary file.
-// RETURN
-// Success: String containing the read line. NULL, if EOF is reached.
-// Fail: NULL, if fd < 0, GNL_BUFFER_SIZE < 0 or memory allocation fails
+/**
+ * @brief Reads a line from a file descriptor. Repeated calls let you read one
+ * line at a time. The line includes the terminating '\\n' character, except if
+ * no '\\n' is at EOF. The macro GNL_BUFFER_SIZE defines the buffer size for
+ * read() and can be changed when compiling. There will be undefined behavior
+ * if the file has changed since the last call or if the file is a binary file.
+ * 
+ * @param fd File descriptor of the file to read from
+ * @retval ✔︎ String containing the read line. NULL, if EOF is reached.
+ * @retval ✘ NULL, if fd < 0, GNL_BUFFER_SIZE < 0 or memory allocation fails
+ */
 char	*get_next_line(int fd);
 
 size_t	gnl_strlen(const char *s);

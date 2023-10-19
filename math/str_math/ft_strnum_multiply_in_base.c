@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_multiply_in_base.c                          :+:      :+:    :+:   */
+/*   ft_strnum_multiply_in_base.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 13:47:03 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/19 10:35:15 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 12:43:55 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,16 @@ static char	*ft_multiply(char *multiplier, char *multiplicand, char *base)
 	while (ft_strnumcmp(count, multiplier, base) < 0)
 	{
 		ft_replace_ptr((void **)&count,
-			(void *)ft_str_add_in_base(count, one, base));
+			(void *)ft_strnum_add_in_base(count, one, base));
 		ft_replace_ptr((void **)&product,
-			(void *)ft_str_add_in_base(product, multiplicand, base));
+			(void *)ft_strnum_add_in_base(product, multiplicand, base));
 		if (!product || !count)
 			return (free(product), free(count), free(one), NULL);
 	}
 	return (free(count), free(one), product);
 }
 
-char	*ft_str_multiply_in_base(char *multiplier,
+char	*ft_strnum_multiply_in_base(char *multiplier,
 	char *multiplicand, char *base)
 {
 	char	*product;
@@ -48,8 +48,8 @@ char	*ft_str_multiply_in_base(char *multiplier,
 		return (NULL);
 	sign_mp = '+' * (multiplier[0] != '-') + '-' * (multiplier[0] == '-');
 	sign_mpc = '+' * (multiplicand[0] != '-') + '-' * (multiplicand[0] == '-');
-	multiplier = ft_str_abs_in_base(multiplier, base);
-	multiplicand = ft_str_abs_in_base(multiplicand, base);
+	multiplier = ft_strnum_abs_in_base(multiplier, base);
+	multiplicand = ft_strnum_abs_in_base(multiplicand, base);
 	if (!multiplier || !multiplicand)
 		return (NULL);
 	if (sign_mp == sign_mpc)
