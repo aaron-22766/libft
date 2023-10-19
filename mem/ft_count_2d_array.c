@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 14:15:05 by arabenst          #+#    #+#             */
-/*   Updated: 2023/10/19 14:15:17 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 14:25:57 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_count_2d_array(void **array)
 	size_t	i;
 
 	i = 0;
-	while (arr && arr[i])
+	while (array && array[i])
 		i++;
 	return (i);
 }
