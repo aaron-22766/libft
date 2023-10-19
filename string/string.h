@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 16:34:20 by arabenst          #+#    #+#             */
-/*   Updated: 2023/10/19 16:34:28 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/19 17:15:35 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,6 +165,7 @@ ssize_t	ft_strrchr_index(const char *s, int c);
  * @retval ✔︎ Index of the first character of ’s’ which is not in ’charset’
  * @retval ✘ If every character of ’s’ appears in ’charset’,
  * the index of the first NULL-character
+ * @warning Segfaults, if any of the strings are NULL
  */
 size_t	ft_strspn(const char *s, const char *charset);
 
@@ -178,6 +179,7 @@ size_t	ft_strspn(const char *s, const char *charset);
  * @retval ✔︎ Index of the first character of ’s’ which is also in ’charset’
  * @retval ✘If every character of ’s’ does not appear in ’charset’,
  * the index of the first NULL-character
+ * @warning Segfaults, if any of the strings are NULL
  */
 size_t	ft_strcspn(const char *s, const char *charset);
 
