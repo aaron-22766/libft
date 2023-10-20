@@ -104,35 +104,35 @@ Supported flags: "-0.# +".
 | ft_vasprintf | Dynamically allocates a new string and writes to it (from va_list) |
 
 ### string
-| Function        | Description                                                                                                           |
-|-----------------|-----------------------------------------------------------------------------------------------------------------------|
-| strlen          | Computes the length of the string ’s’. (not protected)                                                                |
-| strplen         | Computes the length of the string ’s’. (protected)                                                                    |
-| strlcpy         | Copies ’src’ to ’dst’                                                                                                 |
-| strlcat         | Concatenates ’src’ to ’dst’                                                                                           |
-| strlcat_realloc | Concatenates ’src’ to ’dst’, reallocing sufficient memory if the concatenation is greater than ’dstsize’              |
-| strchr          | Locates the first occurrence of the character ’c’ in the string ’s’                                                   |
-| strrchr         | Locates the last occurrence of the character ’c’ in the string ’s’                                                    |
-| strchr_index    | Locates the first occurrence of the character ’c’ in the string ’s’                                                   |
-| strrchr_index   | Locates the last occurrence of the character ’c’ in the string ’s’                                                    |
-| strspn          | Locates the index of the first character of ’s’ which is not in ’charset’                                             |
-| strcspn         | Locates the index of the first character of ’s’ which also in ’charset’                                               |
-| strrspn         | Locates the index of the last character of ’s’ which is not in ’charset’                                              |
-| strrcspn        | Locates the index of the last character of ’s’ which also in ’charset’                                                |
-| strcmp          | Compares the two strings ’s1’ and ’s2’                                                                                |
-| strncmp         | Compares ’n’ characters of the two strings ’s1’ and ’s2’                                                              |
-| strcpy          | Copies ’src’ to ’dst’                                                                                                 |
-| strncpy         | Copies at most ’len’ characters from ’src’ to ’dst’                                                                   |
-| strnstr         | Locates the first occurrence of ’needle’ in ’haystack’, within ’len’ characters                                       |
-| strdup          | Allocates a copy of ’s1’                                                                                              |
-| substr          | Allocates a sub-string from the string ’s’                                                                            |
-| strjoin         | Allocates new string, which is the result of the concatenation of ’s1’ and ’s2’                                       |
-| strtrim         | Allocates a copy of ’s1’ with all characters specified in ’set’ removed from the beginning and the end of the string. |
-| split           | Splits ’s’ using the character ’c’ as a delimiter                                                                     |
-| strmapi         | Applies the function ’f’ to each character of ’s’, returning new string                                               |
-| striteri        | Applies the function ’f’ on each character of ’s’                                                                     |
-| count_chars     | Counts the number of occurences of ’c’ in ’str’                                                                       |
-| strmerge        | Replaces ’dst’ with the concatenation of ’dst’ and ’src’, order depends on ’dstleft’                                  |
-| revstr          | Reverses the string ’str’ in place                                                                                    |
-| str_insert      | Inserts the string ’insert’ into ’str’, replacing the portion indicated by ’start’ and ’len’                          |
-| strends         | Checks if the given base string ends with the specified substring                                                     |
+| Function           | Description                                                                                                           |
+|--------------------|-----------------------------------------------------------------------------------------------------------------------|
+| ft_strlen          | Computes the length of the string ’s’. (not protected)                                                                |
+| ft_strplen         | Computes the length of the string ’s’. (protected)                                                                    |
+| ft_strlcpy         | Copies ’src’ to ’dst’                                                                                                 |
+| ft_strlcat         | Concatenates ’src’ to ’dst’                                                                                           |
+| ft_strlcat_realloc | Concatenates ’src’ to ’dst’, reallocing sufficient memory if the concatenation is greater than ’dstsize’              |
+| ft_strchr          | Locates the first occurrence of the character ’c’ in the string ’s’                                                   |
+| ft_strrchr         | Locates the last occurrence of the character ’c’ in the string ’s’                                                    |
+| ft_strchr_index    | Locates the first occurrence of the character ’c’ in the string ’s’                                                   |
+| ft_strrchr_index   | Locates the last occurrence of the character ’c’ in the string ’s’                                                    |
+| ft_strspn          | Locates the index of the first character of ’s’ which is not in ’charset’                                             |
+| ft_strcspn         | Locates the index of the first character of ’s’ which also in ’charset’                                               |
+| ft_strrspn         | Locates the index of the last character of ’s’ which is not in ’charset’                                              |
+| ft_strrcspn        | Locates the index of the last character of ’s’ which also in ’charset’                                                |
+| ft_strcmp          | Compares the two strings ’s1’ and ’s2’                                                                                |
+| ft_strncmp         | Compares ’n’ characters of the two strings ’s1’ and ’s2’                                                              |
+| ft_strcpy          | Copies ’src’ to ’dst’                                                                                                 |
+| ft_strncpy         | Copies at most ’len’ characters from ’src’ to ’dst’                                                                   |
+| ft_strnstr         | Locates the first occurrence of ’needle’ in ’haystack’, within ’len’ characters                                       |
+| ft_strdup          | Allocates a copy of ’s1’                                                                                              |
+| ft_substr          | Allocates a sub-string from the string ’s’                                                                            |
+| ft_strjoin         | Allocates new string, which is the result of the concatenation of ’s1’ and ’s2’                                       |
+| ft_strtrim         | Allocates a copy of ’s1’ with all characters specified in ’set’ removed from the beginning and the end of the string. |
+| ft_split           | Splits ’s’ using the character ’c’ as a delimiter                                                                     |
+| ft_strmapi         | Applies the function ’f’ to each character of ’s’, returning new string                                               |
+| ft_striteri        | Applies the function ’f’ on each character of ’s’                                                                     |
+| ft_count_chars     | Counts the number of occurences of ’c’ in ’str’                                                                       |
+| ft_strmerge        | Replaces ’dst’ with the concatenation of ’dst’ and ’src’, order depends on ’dstleft’                                  |
+| ft_revstr          | Reverses the string ’str’ in place                                                                                    |
+| ft_str_insert      | Inserts the string ’insert’ into ’str’, replacing the portion indicated by ’start’ and ’len’                          |
+| ft_strends         | Checks if the given base string ends with the specified substring                                                     |
