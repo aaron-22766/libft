@@ -1,3 +1,9 @@
+# Libft
+
+Collection of useful functions and reimlementations of different library's functions.
+
+### check
+
 ft_isalnum
 ft_isalpha
 ft_isascii
@@ -6,6 +12,9 @@ ft_islower
 ft_isprint
 ft_isspace
 ft_isupper
+
+### convert
+
 ft_atoi
 ft_atoll
 ft_atolower
@@ -20,8 +29,13 @@ ft_tolower
 ft_toupper
 ft_uitoa
 ft_ultoa_hex
+
+### get_next_line
+
 get_next_line
-get_next_line_utils
+
+### math
+
 ft_abs
 ft_count_digits
 ft_factorial
@@ -32,6 +46,9 @@ ft_log2_int
 ft_pow
 ft_sqrt
 ft_sqrt_int
+
+### strnum math (bad performance)
+
 ft_strnum_abs
 ft_strnum_abs_in_base
 ft_strnum_add
@@ -49,6 +66,9 @@ ft_strnum_pow_in_base
 ft_strnum_subtract
 ft_strnum_subtract_in_base
 ft_strnumcmp
+
+### memory
+
 ft_bzero
 ft_calloc
 ft_count_2d_array
@@ -60,17 +80,26 @@ ft_memmove
 ft_memset
 ft_replace_ptr
 ft_swap_pointers
+
+### print
+
+ft_putchar_fd
+ft_putendl_fd
+ft_putnbr_fd
+ft_putstr_fd
 ft_print_strnum
+
+### printf
+
 ft_asprintf
 ft_dprintf
 ft_eprintf
 ft_printf
 ft_vasprintf
 ft_vdprintf
-ft_putchar_fd
-ft_putendl_fd
-ft_putnbr_fd
-ft_putstr_fd
+
+### string
+
 ft_count_chars
 ft_revstr
 ft_split
