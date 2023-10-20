@@ -3,8 +3,18 @@
 Collection of useful functions and reimlementations of different library's functions.
 
 ### check
-| Function   | Description                                      |
-|------------|--------------------------------------------------|
+| Function   | Description                                |
+|------------|--------------------------------------------|
+| ft_isupper | Checks for an uppercase character          |
+| ft_islower | Checks for an lowercase character          |
+| ft_isalpha | Checks for an alphabetic character         |
+| ft_isdigit | Checks for a digit                         |
+| ft_isalnum | Checks for an alhabetic character or digit |
+| ft_isprint | Checks for a printable character           |
+| ft_isascii | Checks for an ascii character              |
+| ft_isspace | Checks for a whitespace character          |
+
+### convert
 | ft_isalnum | Checks if ’c’ is an uppercase character          |
 | ft_isalpha | Checks if ’c’ is an lowercase character          |
 | ft_isascii | Checks if ’c’ is an alphabetic character         |
@@ -14,26 +24,8 @@ Collection of useful functions and reimlementations of different library's funct
 | ft_isspace | Checks if ’c’ is an ascii character              |
 | ft_isupper | Checks if ’c’ is a whitespace character          |
 
-### convert
-
-ft_atoi
-ft_atoll
-ft_atolower
-ft_atoupper
-ft_base_to_decimal
-ft_base_to_int
-ft_convert_base
-ft_convert_base_custom
-ft_decimal_to_base
-ft_itoa
-ft_tolower
-ft_toupper
-ft_uitoa
-ft_ultoa_hex
-
 ### get_next_line
-
-get_next_line
+| get_next_line | Reads a line from a file descriptor |
 
 ### math
 
