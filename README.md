@@ -3,15 +3,16 @@
 Collection of useful functions and reimlementations of different library's functions.
 
 ### check
-
-ft_isalnum
-ft_isalpha
-ft_isascii
-ft_isdigit
-ft_islower
-ft_isprint
-ft_isspace
-ft_isupper
+| Function   | Description                                      |
+|------------|--------------------------------------------------|
+| ft_isalnum | Checks if ’c’ is an uppercase character          |
+| ft_isalpha | Checks if ’c’ is an lowercase character          |
+| ft_isascii | Checks if ’c’ is an alphabetic character         |
+| ft_isdigit | Checks if ’c’ is a digit                         |
+| ft_islower | Checks if ’c’ is an alhabetic character or digit |
+| ft_isprint | Checks if ’c’ is a printable character           |
+| ft_isspace | Checks if ’c’ is an ascii character              |
+| ft_isupper | Checks if ’c’ is a whitespace character          |
 
 ### convert
 
