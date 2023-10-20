@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 12:29:14 by arabenst          #+#    #+#             */
-/*   Updated: 2023/10/19 09:15:53 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/20 12:38:51 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "convert.h"
 
-void	ft_atoupper(char *str)
+char	*ft_atoupper(char *str)
 {
 	size_t	i;
 
@@ -22,4 +22,5 @@ void	ft_atoupper(char *str)
 		str[i] = ft_toupper(str[i]);
 		i++;
 	}
+	return (str);
 }

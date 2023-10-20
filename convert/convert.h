@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:51:27 by arabenst          #+#    #+#             */
-/*   Updated: 2023/10/20 08:17:22 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/20 12:39:31 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,18 +46,20 @@ int			ft_tolower(int c);
  * equivalent.
  * 
  * @param str String to make upper-case
+ * @return ’str’
  * @warning Bus error, if ’str’ is not heap allocated
  */
-void		ft_atoupper(char *str);
+char		*ft_atoupper(char *str);
 
 /**
  * @brief Converts any upper-case letters in ’str’ to their lower-case
  * equivalent.
  * 
  * @param str String to make upper-case
+ * @return ’str’
  * @warning Bus error, if ’str’ is not heap allocated
  */
-void		ft_atolower(char *str);
+char		*ft_atolower(char *str);
 
 /**
  * @brief Converts the initial portion of ’str’ to int representation,

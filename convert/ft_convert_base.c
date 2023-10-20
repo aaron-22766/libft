@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 11:57:46 by arabenst          #+#    #+#             */
-/*   Updated: 2023/04/20 10:46:31 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/20 12:36:57 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_convert_base(char *n, int from_base, int to_base)
 	if (!from || !to)
 		return (free(from), free(to), NULL);
 	if (from_base <= 36)
-		n = ft_str_toupper(ft_strdup(n));
+		n = ft_atoupper(ft_strdup(n));
 	result = ft_convert_base_custom(n, from, to);
 	if (from_base <= 36)
 		free(n);
