@@ -6,13 +6,13 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 21:23:34 by arabenst          #+#    #+#             */
-/*   Updated: 2023/06/15 13:03:31 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/20 08:50:00 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "str_math.h"
 
-char	ft_strnum_invalid(char *n, char *base)
+bool	ft_strnum_invalid(char *n, char *base)
 {
 	int	i;
 

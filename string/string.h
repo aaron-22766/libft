@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 16:34:20 by arabenst          #+#    #+#             */
-/*   Updated: 2023/10/19 18:08:18 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/20 09:02:38 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,22 +40,6 @@ size_t	ft_strlen(const char *s);
  * @retval ✘ 0, if ’s’ is NULL.
  */
 size_t	ft_strplen(const char *s);
-
-/**
- * @brief Converts every lowercase letter in ’str’ to an uppercase letter.
- * 
- * @param str String to convert
- * @return ’str’
- */
-char	*ft_str_toupper(char *str);
-
-/**
- * @brief Converts every uppercase letter in ’str’ to a lowercase letter.
- * 
- * @param str String to convert
- * @return ’str’
- */
-char	*ft_str_tolower(char *str);
 
 /**
  * @brief Copies ’src’ to ’dst’, taking the full size of the destination buffer

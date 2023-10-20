@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:51:27 by arabenst          #+#    #+#             */
-/*   Updated: 2023/10/19 12:52:24 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/20 08:17:22 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,12 +88,6 @@ int			ft_atoi(const char *str);
  * @warning Undefined behavior, if ’str’ is NULL
  */
 long long	ft_atoll(const char *str);
-
-// DESCTIPTION
-// 
-// RETURN
-// Success: Pointer to the string.
-// Fail: NULL, if memory allocation fails.
 
 /**
  * @brief Converts the integer ’n’ to string representation.
