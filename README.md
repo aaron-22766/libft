@@ -46,7 +46,7 @@ Collection of useful functions and reimlementations of different library's funct
 | ft_count_digits    | Counts the number of digits of ’n’                                           |
 
 ### strnum math (bad performance)
-Every strnum can be signed with '+','-' at index 0 or nothing for positive
+Every strnum can be signed with '+', '-' at index 0 or nothing for positive
 | Function                   | Description                                                                              |
 |----------------------------|------------------------------------------------------------------------------------------|
 | ft_strnum_abs              | Finds the absolute value of the decimal strnum ’n’                                       |
@@ -68,67 +68,71 @@ Every strnum can be signed with '+','-' at index 0 or nothing for positive
 | ft_strnum_modulo_in_base   | Calculates the remainder when dividing the strnum ’dividend’ by ’divisor’ in base ’base’ |
 
 ### memory
-
-ft_bzero
-ft_calloc
-ft_count_2d_array
-ft_free_2d_array
-ft_memchr
-ft_memcmp
-ft_memcpy
-ft_memmove
-ft_memset
-ft_replace_ptr
-ft_swap_pointers
+| Function          | Description                                                                                     |
+|-------------------|-------------------------------------------------------------------------------------------------|
+| ft_calloc         | Allocates space for ’count’ elements that are ’size’ bytes of memory, filled with zeroed bytes. |
+| ft_memset         | Writes ’len’ bytes of value ’c’ to the array ’b’                                                |
+| ft_bzero          | Writes ’n’ zeroed bytes to the string ’s’                                                       |
+| ft_memcpy         | Copies ’n’ bytes from memory area ’src’ to memory area ’dst’                                    |
+| ft_memmove        | Copies ’len’ bytes from string ’src’ to string ’dst’ (non-destructive manner)                   |
+| ft_memchr         | Searches for the first occurence of ’c’ in ’s’ within ’n’ bytes                                 |
+| ft_memcmp         | Compares byte string ’s1’ against byte string ’s2’                                              |
+| ft_swap_pointers  | Swaps the two pointers pointed to by ’a’ and ’b’                                                |
+| ft_replace_ptr    | Assigns the pointer ’new’ to the pointer pointed to by ’orig’ (frees previous memory)           |
+| ft_free_2d_array  | Frees the NULL-terminated two-dimensional array                                                 |
+| ft_count_2d_array | Counts the elements of the NULL-terminated two-dimensional array.                               |
 
 ### print
+| Function        | Description                                                                    |
+|-----------------|--------------------------------------------------------------------------------|
+| ft_putchar_fd   | Outputs the character ’c’ to the given file descriptor ’fd’                    |
+| ft_putstr_fd    | Outputs the string ’s’ to the given file descriptor ’fd’                       |
+| ft_putendl_fd   | Outputs the string ’s’ to the given file descriptor ’fd’ followed by a newline |
+| ft_putnbr_fd    | Outputs the integer ’n’ to the given file descriptor ’fd’                      |
+| ft_print_strnum | Prints the strnum ’strnum’ with thousands separator ","                        |
 
-ft_putchar_fd
-ft_putendl_fd
-ft_putnbr_fd
-ft_putstr_fd
-ft_print_strnum
-
-### printf
-
-ft_asprintf
-ft_dprintf
-ft_eprintf
-ft_printf
-ft_vasprintf
-ft_vdprintf
+### printf family
+Supported conversion characters: "cspdiuxX%".
+Supported flags: "-0.# +".
+| Function     | Description                                                        |
+|--------------|--------------------------------------------------------------------|
+| ft_printf    | Writes output to stdout                                            |
+| ft_eprintf   | Writes output to stderr                                            |
+| ft_dprintf   | Writes output to the file descriptor ’fd’                          |
+| ft_vdprintf  | Writes output to the file descriptor ’fd’ (from va_list)           |
+| ft_asprintf  | Dynamically allocates a new string and writes to it                |
+| ft_vasprintf | Dynamically allocates a new string and writes to it (from va_list) |
 
 ### string
-
-ft_count_chars
-ft_revstr
-ft_split
-ft_str_insert
-ft_str_tolower
-ft_str_toupper
-ft_strchr
-ft_strchr_index
-ft_strcmp
-ft_strcpy
-ft_strcspn
-ft_strdup
-ft_strends
-ft_striteri
-ft_strjoin
-ft_strlcat
-ft_strlcat_realloc
-ft_strlcpy
-ft_strlen
-ft_strmapi
-ft_strmerge
-ft_strncmp
-ft_strncpy
-ft_strnstr
-ft_strplen
-ft_strrchr
-ft_strrchr_index
-ft_strrcspn
-ft_strrspn
-ft_strspn
-ft_strtrim
-ft_substr
+| Function        | Description                                                                                                           |
+|-----------------|-----------------------------------------------------------------------------------------------------------------------|
+| strlen          | Computes the length of the string ’s’. (not protected)                                                                |
+| strplen         | Computes the length of the string ’s’. (protected)                                                                    |
+| strlcpy         | Copies ’src’ to ’dst’                                                                                                 |
+| strlcat         | Concatenates ’src’ to ’dst’                                                                                           |
+| strlcat_realloc | Concatenates ’src’ to ’dst’, reallocing sufficient memory if the concatenation is greater than ’dstsize’              |
+| strchr          | Locates the first occurrence of the character ’c’ in the string ’s’                                                   |
+| strrchr         | Locates the last occurrence of the character ’c’ in the string ’s’                                                    |
+| strchr_index    | Locates the first occurrence of the character ’c’ in the string ’s’                                                   |
+| strrchr_index   | Locates the last occurrence of the character ’c’ in the string ’s’                                                    |
+| strspn          | Locates the index of the first character of ’s’ which is not in ’charset’                                             |
+| strcspn         | Locates the index of the first character of ’s’ which also in ’charset’                                               |
+| strrspn         | Locates the index of the last character of ’s’ which is not in ’charset’                                              |
+| strrcspn        | Locates the index of the last character of ’s’ which also in ’charset’                                                |
+| strcmp          | Compares the two strings ’s1’ and ’s2’                                                                                |
+| strncmp         | Compares ’n’ characters of the two strings ’s1’ and ’s2’                                                              |
+| strcpy          | Copies ’src’ to ’dst’                                                                                                 |
+| strncpy         | Copies at most ’len’ characters from ’src’ to ’dst’                                                                   |
+| strnstr         | Locates the first occurrence of ’needle’ in ’haystack’, within ’len’ characters                                       |
+| strdup          | Allocates a copy of ’s1’                                                                                              |
+| substr          | Allocates a sub-string from the string ’s’                                                                            |
+| strjoin         | Allocates new string, which is the result of the concatenation of ’s1’ and ’s2’                                       |
+| strtrim         | Allocates a copy of ’s1’ with all characters specified in ’set’ removed from the beginning and the end of the string. |
+| split           | Splits ’s’ using the character ’c’ as a delimiter                                                                     |
+| strmapi         | Applies the function ’f’ to each character of ’s’, returning new string                                               |
+| striteri        | Applies the function ’f’ on each character of ’s’                                                                     |
+| count_chars     | Counts the number of occurences of ’c’ in ’str’                                                                       |
+| strmerge        | Replaces ’dst’ with the concatenation of ’dst’ and ’src’, order depends on ’dstleft’                                  |
+| revstr          | Reverses the string ’str’ in place                                                                                    |
+| str_insert      | Inserts the string ’insert’ into ’str’, replacing the portion indicated by ’start’ and ’len’                          |
+| strends         | Checks if the given base string ends with the specified substring                                                     |
