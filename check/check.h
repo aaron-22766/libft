@@ -6,7 +6,7 @@
 /*   By: arabenst <arabenst@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 12:56:42 by arabenst          #+#    #+#             */
-/*   Updated: 2023/10/19 09:12:34 by arabenst         ###   ########.fr       */
+/*   Updated: 2023/10/25 14:55:18 by arabenst         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,14 @@ bool	ft_isascii(int c);
  * @retval false, if not
  */
 bool	ft_isspace(int c);
+
+/**
+ * @brief Checks if ’n’ is a power of two
+ * 
+ * @param n Number to check
+ * @retval true, if ’n’ is a power of two
+ * @retval false, if not
+ */
+bool	ft_is_power_of_two(unsigned long long n);
 
 #endif
