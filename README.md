@@ -89,16 +89,17 @@ Supported flags: "-0.# +".
 | ft_isupper | Checks if ’c’ is a whitespace character          |
 
 ### check
-| Function   | Description                                |
-|------------|--------------------------------------------|
-| ft_isupper | Checks for an uppercase character          |
-| ft_islower | Checks for an lowercase character          |
-| ft_isalpha | Checks for an alphabetic character         |
-| ft_isdigit | Checks for a digit                         |
-| ft_isalnum | Checks for an alhabetic character or digit |
-| ft_isprint | Checks for a printable character           |
-| ft_isascii | Checks for an ascii character              |
-| ft_isspace | Checks for a whitespace character          |
+| Function           | Description                                          |
+|--------------------|------------------------------------------------------|
+| ft_isupper         | Checks character for an uppercase character          |
+| ft_islower         | Checks character for an lowercase character          |
+| ft_isalpha         | Checks character for an alphabetic character         |
+| ft_isdigit         | Checks character for a digit                         |
+| ft_isalnum         | Checks character for an alhabetic character or digit |
+| ft_isprint         | Checks character for a printable character           |
+| ft_isascii         | Checks character for an ascii character              |
+| ft_isspace         | Checks character for a whitespace character          |
+| ft_is_power_of_two | Checks number for power of two                       |
 
 ### math
 | Function           | Description                                                                  |
