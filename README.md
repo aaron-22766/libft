@@ -35,6 +35,7 @@ Collection of useful functions and reimlementations of different library's funct
 | ft_revstr          | Reverses the string ’str’ in place                                                                                    |
 | ft_str_insert      | Inserts the string ’insert’ into ’str’, replacing the portion indicated by ’start’ and ’len’                          |
 | ft_strends         | Checks if the given base string ends with the specified substring                                                     |
+
 ### memory
 | Function          | Description                                                                                     |
 |-------------------|-------------------------------------------------------------------------------------------------|
@@ -77,16 +78,22 @@ Supported flags: "-0.# +".
 | get_next_line | Reads a line from a file descriptor |
 
 ### convert
-| Function   | Description                                      |
-|------------|--------------------------------------------------|
-| ft_isalnum | Checks if ’c’ is an uppercase character          |
-| ft_isalpha | Checks if ’c’ is an lowercase character          |
-| ft_isascii | Checks if ’c’ is an alphabetic character         |
-| ft_isdigit | Checks if ’c’ is a digit                         |
-| ft_islower | Checks if ’c’ is an alhabetic character or digit |
-| ft_isprint | Checks if ’c’ is a printable character           |
-| ft_isspace | Checks if ’c’ is an ascii character              |
-| ft_isupper | Checks if ’c’ is a whitespace character          |
+| Function               | Description                                                             |
+|------------------------|-------------------------------------------------------------------------|
+| ft_toupper             | Converts a lower-case letter to the corresponding upper-case letter     |
+| ft_tolower             | Converts a upper-case letter to the corresponding lower-case letter     |
+| ft_atoupper            | Converts any lower-case letters in ’str’ to their upper-case equivalent |
+| ft_atolower            | Converts any upper-case letters in ’str’ to their lower-case equivalent |
+| ft_atoi                | Converts the initial portion of ’str’ to int representation             |
+| ft_atoll               | Converts the initial portion of ’str’ to long long representation       |
+| ft_itoa                | Converts the integer ’n’ to string representation                       |
+| ft_uitoa               | Converts the unsigned integer ’n’ to string representation              |
+| ft_ultoa_hex           | Converts the unsigned long ’n’ to string representation in hexadecimal  |
+| ft_base_to_decimal     | Converts the string ’n’ to decimal                                      |
+| ft_base_to_int         | Converts the string ’n’ to a decimal integer                            |
+| ft_decimal_to_base     | Converts the string ’decimal’ to the custom base ’to_base’              |
+| ft_convert_base_custom | Converts the string ’n’ from custom ’from_base’ to custom ’to_base’     |
+| ft_convert_base        | Converts the string ’n’ from ’from_base’ to ’to_base’                   |
 
 ### check
 | Function           | Description                                          |
